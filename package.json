@@ -1,0 +1,25 @@
+{
+  "name": "my-help-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "sync": "npx feishu-pages && node scripts/post-sync.mjs",
+    "sync:build": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build",
+    "sync:full": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "feishu-pages": "^0.7.6"
+  }
+}
