@@ -8,6 +8,7 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
+    "publish": "vitepress build && node scripts/git-push.mjs",
     "sync": "npx feishu-pages && node scripts/post-sync.mjs",
     "sync:build": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build",
     "sync:full": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && vitepress preview",
