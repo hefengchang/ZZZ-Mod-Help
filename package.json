@@ -10,7 +10,8 @@
     "docs:preview": "vitepress preview",
     "sync": "npx feishu-pages && node scripts/post-sync.mjs",
     "sync:build": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build",
-    "sync:full": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && vitepress preview"
+    "sync:full": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && vitepress preview",
+    "deploy": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && node scripts/git-push.mjs"
   },
   "keywords": [],
   "author": "",
