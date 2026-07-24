@@ -1,4 +1,4 @@
-- [绝区零mod帮助文档](C4UUwlc9giThYmkh1qJcQWoKnYf.md)
+- [绝区零mod指南](C4UUwlc9giThYmkh1qJcQWoKnYf.md)
   - [绝区零 XXMI  安装指南](C4UUwlc9giThYmkh1qJcQWoKnYf/QsehwWEv9iJ3BtkwIv7c4JUkngf.md)
   - [绝区零mod常见问题](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy.md)
     - [游戏设置问题（优先选择）](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\AndqwzHf4iQ0WwkhSCIcEIMNnec.md)
