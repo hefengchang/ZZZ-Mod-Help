@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "绝区零 Mod 帮助文档"
+  name: "绝区零 Mod 指南"
   text: "Mod 安装 · 问题排查 · 制作教程"
   tagline: 一站式解决绝区零 Mod 相关的各种问题，从入门到精通
   actions:
