@@ -46,4 +46,4 @@
   - [3Dmigoto各文件的中文注解](C4UUwlc9giThYmkh1qJcQWoKnYf/VcyDwcktsictHGkUnEcc3MrqnOc.md)
     - [d3dx.ini](C4UUwlc9giThYmkh1qJcQWoKnYf/VcyDwcktsictHGkUnEcc3MrqnOc\Yqo6wj6M7itfakkKiUfcnyoRnqh.md)
     - [d3dx_user.ini](C4UUwlc9giThYmkh1qJcQWoKnYf/VcyDwcktsictHGkUnEcc3MrqnOc\LtLKwkS3uia9llkbJVgcl3v5nkf.md)
-- [12](UITbwUyofinnVBkNvblci0y3ndc.md)
+  - [12](C4UUwlc9giThYmkh1qJcQWoKnYf/UITbwUyofinnVBkNvblci0y3ndc.md)
