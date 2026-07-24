@@ -12,7 +12,9 @@
     "sync": "npx feishu-pages && node scripts/post-sync.mjs",
     "sync:build": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build",
     "sync:full": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && vitepress preview",
-    "deploy": "npx feishu-pages && node scripts/post-sync.mjs && vitepress build && node scripts/git-push.mjs"
+    "deploy": "node scripts/deploy.mjs",
+    "docs:list": "node scripts/find-new-docs.mjs",
+    "gen:sidebar": "node scripts/generate-sidebar.mjs"
   },
   "keywords": [],
   "author": "",
