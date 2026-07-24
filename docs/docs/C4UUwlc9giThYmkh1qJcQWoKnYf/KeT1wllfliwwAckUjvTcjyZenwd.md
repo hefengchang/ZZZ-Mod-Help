@@ -1,7 +1,7 @@
 ---
 title: 绝区零mod获取网站
 slug: C4UUwlc9giThYmkh1qJcQWoKnYf\KeT1wllfliwwAckUjvTcjyZenwd
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 
@@ -13,7 +13,9 @@ sidebar_position: 3
 
 https://www.patreon.com/explore/search?type=campaign&query=Zenless%20Zone%20Zero
 
-香蕉网：需要vpn翻墙，https://gamebanana.com/games/19567
+N网：https://www.nexusmods.com/games/zenlesszonezero
+
+香蕉网：需要科学上网，https://gamebanana.com/games/19567
 
 可在B站搜索教程，或者看下面的教程
 

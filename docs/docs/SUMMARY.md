@@ -1,4 +1,5 @@
 - [绝区零mod帮助文档](C4UUwlc9giThYmkh1qJcQWoKnYf.md)
+  - [绝区零 XXMI  安装指南](C4UUwlc9giThYmkh1qJcQWoKnYf/QsehwWEv9iJ3BtkwIv7c4JUkngf.md)
   - [绝区零mod常见问题](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy.md)
     - [游戏设置问题（优先选择）](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\AndqwzHf4iQ0WwkhSCIcEIMNnec.md)
     - [当Mod出现问题时的解决思路](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\Q2p5wjNTUiTP6vkWi26cbshJnze.md)
@@ -19,6 +20,7 @@
       - [大地图的地板等模型消失](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\Uo2ZwDLktittKMkhVglc0PP5nFd.md)
       - [录像店的所有录像带消失](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\OF3jwza08iqAb6kuiKccVHjPnmc.md)
       - [所有角色的眼睛变成黑色](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\UmggwTIMTisDnTkWTcLcMcTwnuf.md)
+      - [叶瞬光在某个视角会导致异常](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\DQORwGBY6isTBFkUsqwcif6hnvg.md)
     - [RabbitFX相关问题](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e.md)
       - [npc靠近时脸部变黑，出现异常](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e\RhqBwxnq3i2N0HkLwmAcJyJInlg.md)
       - [游戏切到某个mod时会崩溃](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e\XWxywlpoEi5XGgkYyoRcoDmsnph.md)
