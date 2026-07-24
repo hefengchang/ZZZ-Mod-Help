@@ -234,10 +234,6 @@ const sidebar: DefaultTheme.SidebarItem[] = [
         link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/VcyDwcktsictHGkUnEcc3MrqnOc/LtLKwkS3uia9llkbJVgcl3v5nkf"
       }
     ]
-  },
-  {
-    text: "📄 12",
-    link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/UITbwUyofinnVBkNvblci0y3ndc"
   }
 ]
 
