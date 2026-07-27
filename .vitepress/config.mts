@@ -126,6 +126,18 @@ export default defineConfig({
   ignoreDeadLinks: true,
 
     locales: {
+    '/': {
+      lang: 'zh-CN',
+      label: '中文',
+      themeConfig: {
+        nav: [
+          { text: '首页', link: '/' },
+          { text: '帮助文档', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
+          { text: '常见问题', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy' },
+          { text: 'English', link: '/en/' },
+        ],
+      },
+    },
     '/en/': {
       lang: 'en',
       label: 'English',
@@ -167,13 +179,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
 
-    // 中文（默认）
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '帮助文档', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
-      { text: '常见问题', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy' },
-          { text: 'English', link: '/en/' },
-    ],
+
     sidebar: sidebarZh,
     editLink: {
       pattern: 'https://github.com/hefengchang/ZZZ-Mod-Help/edit/main/docs/:path',
