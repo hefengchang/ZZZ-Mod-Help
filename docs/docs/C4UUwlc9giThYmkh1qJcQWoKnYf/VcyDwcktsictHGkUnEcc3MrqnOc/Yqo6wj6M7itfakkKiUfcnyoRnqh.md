@@ -452,7 +452,7 @@ analyse_frame = no_modifiers VK_F8
 
 ;    deferred_ctx_accurate: 将延迟上下文的资源转储延迟到
 
-;                 GPU 更新它们之后。<em>所有</em>
+;                 GPU 更新它们之后。所有
 
 ;                 正在转储的资源副本都保存在内存中，因此可能会耗尽
 
@@ -1344,7 +1344,7 @@ fix_sv_position = 0
 
 ; 已弃用：改为使用 'x = oD'，并在着色器中测试负零
 
-; if (asint(IniParams[0].x) == asint(-0.0)) { /* depth inactive <em>/ } else { /</em> depth active */ }
+; if (asint(IniParams[0].x) == asint(-0.0)) { /* depth inactive / } else { / depth active */ }
 
 ;depth_filter = depth_inactive
 

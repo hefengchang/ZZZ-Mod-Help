@@ -51,9 +51,10 @@ function processMdFile(filePath) {
     changed = true
   }
 
-  // 清理飞书导出的 <b></b> 标签（普通段落中）
-  newContent = content.replace(/<b>\s*<\/b>/g, '')  // 空标签直接删
-  newContent = newContent.replace(/<\/?b>/g, '')     // 剩下的 b 标签也删掉
+  // 清理飞书导出的 HTML 格式标签
+  newContent = content
+    .replace(/<(b|em|u|i|strong)>\s*<\/(b|em|u|i|strong)>/g, '')  // 空标签直接删
+    .replace(/<\/?(b|em|u|i|strong)>/g, '')                         // 标签本身删掉
   if (newContent !== content) {
     content = newContent
     changed = true

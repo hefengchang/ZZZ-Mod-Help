@@ -16,7 +16,7 @@ sidebar_position: 3
 "C:\Users\YOUR_USERNAME_HERE\AppData\Roaming\XXMI Launcher\Resources\Bin\XXMI Launcher.exe" --nogui --xxmi ZZMI %COMMAND%
 ```
 
-<em>（注意：别忘了将</em> `YOUR_USERNAME_HERE` <em>替换为您的实际Windows用户名！)</em>
+（注意：别忘了将 `YOUR_USERNAME_HERE` 替换为您的实际Windows用户名！)
 
 - 在所链接的解决方案中，假设 XXMI 启动程序已安装在默认位置。如果未安装，请找到您的 XXMI Launcher .exe 文件的实际路径。将引号中的内容替换为您自己的路径。
 

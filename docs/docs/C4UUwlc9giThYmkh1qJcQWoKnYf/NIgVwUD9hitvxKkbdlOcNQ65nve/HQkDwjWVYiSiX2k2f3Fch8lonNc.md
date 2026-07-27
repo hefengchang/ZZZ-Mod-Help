@@ -66,13 +66,13 @@ CS：计算着色器，按小键盘“.”+1、2循环选择，按“.”+3复�
 
 [ShaderOverride.PS1]
 
-hash = xxx<em>（16位hash值）</em>  hash = xxx（16 位 hash 值）
+hash = xxx（16位hash值）  hash = xxx（16 位 hash 值）
 
 handling = skip
 
 二、使用贴图的hash值来隐藏特效的写法：
 
-<em>（以隐藏月城柳的大招镜片反光效果为例，hash值已失效，仅供代码参考</em>）
+（以隐藏月城柳的大招镜片反光效果为例，hash值已失效，仅供代码参考）
 
 [TextureOverride.Ult.Glasses.1]
 
@@ -104,7 +104,7 @@ ib = null
 
 ## 活动状态判断
 
-<em>小知识：“==”表示判断“相等”，“=”表示赋值。</em>
+小知识：“==”表示判断“相等”，“=”表示赋值。
 
 为了更保险一些，需要添加一个角色处于活动状态（if $active == 1）的条件判断，首先需要在ini里有如下代码：
 
@@ -116,13 +116,13 @@ global $active
 
 post $active = 0
 
-<em>Constants部分定义一个全局变量$active，Present部分将变量post（每帧重置）为0。</em>
+Constants部分定义一个全局变量$active，Present部分将变量post（每帧重置）为0。
 
 并且在某个position标题（或者Blend标题）的hash下有“$active = 1”：
 
 <img src="/assets/PKTvb2YnMouhUgxpnbhcV6l5n3g.png" src-width="532" src-height="270" align="center"/>
 
-<em>当此hash出现时，将变量$active赋值为1.</em>
+当此hash出现时，将变量$active赋值为1.
 
 如果mod是可切换的，一般都会包括上述代码，但如果没有就需要手动添加。
 

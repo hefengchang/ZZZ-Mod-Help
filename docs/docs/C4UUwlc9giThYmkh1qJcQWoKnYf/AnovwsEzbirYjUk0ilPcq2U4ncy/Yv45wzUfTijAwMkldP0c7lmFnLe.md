@@ -29,11 +29,11 @@ ib = ResourceAliceHeadBIB
 if 0==1
    run = CommandListSkinTexture
 endif
-<em>;if $bangs == 0</em>
-    <em>;Resource\ZZMI\Diffuse = ref ResourceAliceHeadBDiffuse</em>
-    <em>;Resource\ZZMI\NormalMap = ref ResourceAliceHeadBNormalMap</em>
-    <em>;Resource\ZZMI\LightMap = ref ResourceAliceHeadBLightMap</em>
-    <em>;Resource\ZZMI\MaterialMap = ref ResourceAliceHeadBMaterialMap</em>
+;if $bangs == 0
+    ;Resource\ZZMI\Diffuse = ref ResourceAliceHeadBDiffuse
+    ;Resource\ZZMI\NormalMap = ref ResourceAliceHeadBNormalMap
+    ;Resource\ZZMI\LightMap = ref ResourceAliceHeadBLightMap
+    ;Resource\ZZMI\MaterialMap = ref ResourceAliceHeadBMaterialMap
 if $bangs == 1
     Resource\ZZMI\Diffuse = ref ResourceAliceHeadBDiffuse.HuoHuo.Blonde
 else if $bangs == 2

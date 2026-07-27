@@ -53,7 +53,7 @@ post $active = 0
 
 <img src="/assets/LRJkbKkvpobiQExITzQcRzIinQb.png" src-width="528" src-height="152" align="center"/>
 
-注意<em>if语句和endif之间的代码行前的缩进</em>
+注意if语句和endif之间的代码行前的缩进
 
 注意：如果你要修复的mod不只是去除了原本的眼睛，而是修改了眼睛，那么需要将所有眼睛部分的代码的hash下面的语句都使用if条件包裹：
 
@@ -83,7 +83,7 @@ $active =1
 > hash=到body的ini中的BodyPosition下寻找
 > $active=1
 
-<em>$active = 1之所以需要加在邦布身体部分的Position下面，是因为邦布眼睛是共享的，只有身体的hash才有唯一性。这样才能实现仅当该邦布身体出现在屏幕上时，才对眼睛进行修改。</em>
+$active = 1之所以需要加在邦布身体部分的Position下面，是因为邦布眼睛是共享的，只有身体的hash才有唯一性。这样才能实现仅当该邦布身体出现在屏幕上时，才对眼睛进行修改。
 
 结束。
 
