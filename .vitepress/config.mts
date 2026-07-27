@@ -125,7 +125,11 @@ export default defineConfig({
   lastUpdated: true,
   ignoreDeadLinks: true,
 
-  locales: {
+    locales: {
+    '/': {
+      lang: 'zh-CN',
+      label: '中文',
+    },
     '/en/': {
       lang: 'en',
       label: 'English',
