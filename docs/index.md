@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 📖 快速上手
-      link: /docs/C4UUwlc9giThYmkh1qJcQWoKnYf
+      link: /docs/C4UUwlc9giThYmkh1qJcQWoKnYf/QsehwWEv9iJ3BtkwIv7c4JUkngf
     - theme: alt
       text: ❓ 常见问题
       link: /docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy

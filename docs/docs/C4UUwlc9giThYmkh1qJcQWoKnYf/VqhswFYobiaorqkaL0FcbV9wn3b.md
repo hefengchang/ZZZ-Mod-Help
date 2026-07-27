@@ -1,7 +1,7 @@
 ---
 title: mod相关教程
 slug: C4UUwlc9giThYmkh1qJcQWoKnYf\VqhswFYobiaorqkaL0FcbV9wn3b
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 

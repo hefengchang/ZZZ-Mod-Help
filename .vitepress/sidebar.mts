@@ -10,6 +10,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
     link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/QsehwWEv9iJ3BtkwIv7c4JUkngf"
   },
   {
+    text: "📄 3DMigoto / ZZMI INI 文档指南",
+    link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/TVTjwU7NFi5OuckfwNtckgPqn1f"
+  },
+  {
     text: "❓ 绝区零mod常见问题",
     collapsed: false,
     items: [
