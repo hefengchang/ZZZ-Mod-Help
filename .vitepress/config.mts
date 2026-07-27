@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import sidebarZh from './sidebar.mts'
 
 // ============================================
-// 英文侧边栏（UI 文字用英文，内容依旧是中文）
+// 英文侧边栏
 // ============================================
 const sidebarEn = [
   {
@@ -120,65 +120,15 @@ const sidebarEn = [
 export default defineConfig({
   srcDir: 'docs',
   base: '/ZZZ-Mod-Help/',
-  title: '绝区零 Mod 帮助文档',
-  description: '绝区零 Mod 安装、配置、故障排除与制作教程',
   lang: 'zh-CN',
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
 
-  // ============================================
-  // 国际化
-  // ============================================
   locales: {
-    '/': {
-      lang: 'zh-CN',
-      label: '中文',
-      title: '绝区零 Mod 帮助文档',
-      description: '绝区零 Mod 安装、配置、故障排除与制作教程',
-      themeConfig: {
-        nav: [
-          { text: '首页', link: '/' },
-          { text: '帮助文档', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
-          { text: '常见问题', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy' },
-        ],
-        sidebar: sidebarZh,
-        editLink: {
-          pattern: 'https://github.com/hefengchang/ZZZ-Mod-Help/edit/main/docs/:path',
-          text: '在 GitHub 上编辑此页',
-        },
-        footer: {
-          message: '基于 VitePress 构建 | 内容仅供参考',
-          copyright: 'Copyright © 2024-2025 绝区零 Mod 帮助文档',
-        },
-        outline: { level: [2, 3], label: '本页内容' },
-        returnToTopLabel: '返回顶部',
-        sidebarMenuLabel: '菜单',
-        darkModeSwitchLabel: '深色模式',
-        lightModeSwitchTitle: '切换至浅色模式',
-        darkModeSwitchTitle: '切换至深色模式',
-        docFooter: { prev: '上一页', next: '下一页' },
-        lastUpdated: { text: '最后更新于' },
-        search: {
-          provider: 'local',
-          options: {
-            translations: {
-              button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
-              modal: {
-                noResultsText: '未找到相关结果',
-                resetButtonTitle: '清除搜索条件',
-                footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
-              },
-            },
-          },
-        },
-      },
-    },
     '/en/': {
       lang: 'en',
       label: 'English',
-      title: 'ZZZ Mod Help Docs',
-      description: 'Zenless Zone Zero Mod installation, troubleshooting, and tutorials',
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
@@ -195,11 +145,6 @@ export default defineConfig({
           copyright: 'Copyright © 2024-2025 ZZZ Mod Help Docs',
         },
         outline: { level: [2, 3], label: 'On this page' },
-        returnToTopLabel: 'Back to top',
-        sidebarMenuLabel: 'Menu',
-        darkModeSwitchLabel: 'Dark mode',
-        lightModeSwitchTitle: 'Switch to light mode',
-        darkModeSwitchTitle: 'Switch to dark mode',
         docFooter: { prev: 'Previous', next: 'Next' },
         lastUpdated: { text: 'Last updated' },
         search: {
@@ -207,11 +152,7 @@ export default defineConfig({
           options: {
             translations: {
               button: { buttonText: 'Search', buttonAriaLabel: 'Search docs' },
-              modal: {
-                noResultsText: 'No results found',
-                resetButtonTitle: 'Clear search',
-                footer: { selectText: 'Select', navigateText: 'Navigate', closeText: 'Close' },
-              },
+              modal: { noResultsText: 'No results found', resetButtonTitle: 'Clear search' },
             },
           },
         },
@@ -222,8 +163,45 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/hefengchang?tab=repositories&q=&type=&language=&sort=stargazers' },
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
+
+    // 中文（默认）
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '帮助文档', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
+      { text: '常见问题', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy' },
+    ],
+    sidebar: sidebarZh,
+    editLink: {
+      pattern: 'https://github.com/hefengchang/ZZZ-Mod-Help/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页',
+    },
+    footer: {
+      message: '基于 VitePress 构建 | 内容仅供参考',
+      copyright: 'Copyright © 2024-2025 绝区零 Mod 帮助文档',
+    },
+    outline: { level: [2, 3], label: '本页内容' },
+    returnToTopLabel: '返回顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '深色模式',
+    lightModeSwitchTitle: '切换至浅色模式',
+    darkModeSwitchTitle: '切换至深色模式',
+    docFooter: { prev: '上一页', next: '下一页' },
+    lastUpdated: { text: '最后更新于' },
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
+          modal: {
+            noResultsText: '未找到相关结果',
+            resetButtonTitle: '清除搜索条件',
+            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
+          },
+        },
+      },
+    },
   },
 
   head: [
