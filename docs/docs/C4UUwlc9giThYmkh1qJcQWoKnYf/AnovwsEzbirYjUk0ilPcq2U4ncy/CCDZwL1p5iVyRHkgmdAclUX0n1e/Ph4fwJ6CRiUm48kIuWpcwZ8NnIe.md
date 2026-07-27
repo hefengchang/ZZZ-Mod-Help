@@ -21,7 +21,7 @@ sidebar_position: 3
 代码举例：
 
 ```java
-<b>[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component1]</b>
+[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component1]
 hash = ac8e9ee3   #头发hash
 match_first_index = 0
 handling = skip
@@ -29,7 +29,7 @@ run = CommandListSkinTexture
 ib = Resource_ac8e9ee3_Component1
 ps-t13 = null    #发光纹理槽位失效代码
 run = CommandList_IB_yixuanxuan_ac8e9ee3_Component1
-<b>[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component2]</b>
+[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component2]
 hash = ac8e9ee3  #头发hash
 match_first_index = 21816
 handling = skip

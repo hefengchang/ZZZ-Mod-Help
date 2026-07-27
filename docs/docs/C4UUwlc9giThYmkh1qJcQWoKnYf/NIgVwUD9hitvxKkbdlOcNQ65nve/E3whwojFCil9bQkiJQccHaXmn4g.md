@@ -28,9 +28,9 @@ sidebar_position: 1
 
 ---
 
-# <b>星见雅改法 </b>
+# 星见雅改法 
 
-## <b>第一步：找到雅的身体 IB 部分 </b>
+## 第一步：找到雅的身体 IB 部分 
 
 因为雅的身体部分原模型没有肤色，所以 mod 的肤色会渲染异常，就需要把肤色部分的渲染移动到四肢的 IB 部分去绘制。 
 
@@ -54,9 +54,9 @@ drawindexed = 18519,130365,0
 
 在此 IB 的节[TextureOverrideXXXX]上方和下方分别添加一行代码： 
 
-<b>[ResourceBodyVB] </b>
+[ResourceBodyVB] 
 
-<b>ResourceBodyVB = copy vb0 </b>
+ResourceBodyVB = copy vb0 
 
 ```haskell
 [ResourceBodyVB] 
@@ -78,7 +78,7 @@ drawindexed = 18519,130365,0
 
 这里添加的第二行代码我选择添加在了 match_first_index 行的下方，经测试只要添加在此 IB 的标题下都可以。 
 
-## <b>第二步：来到雅的四肢IB部分 </b>
+## 第二步：来到雅的四肢IB部分 
 
 目前 14 版本，雅的四肢IB的 hash 值为 d8003df3。 
 
@@ -121,7 +121,7 @@ vb1 = Resource981c1a1eTexcoord
 drawindexed = 18519,130365,0
 ```
 
-在添加之前，我先解释一下这几行代码来自哪里。<b>ib行</b>来自身体部分的<b>ib行</b>，<b>vb0行</b>来自我们第一步中添加的代码，<b>vb1行</b>来自身体部分的Texcoord，最后的<b>drawindex</b>也是来自身体IB部分。
+在添加之前，我先解释一下这几行代码来自哪里。ib行来自身体部分的ib行，vb0行来自我们第一步中添加的代码，vb1行来自身体部分的Texcoord，最后的drawindex也是来自身体IB部分。
 
 ```haskell
 [ResourceBodyVB] 
@@ -164,7 +164,7 @@ hash = 9a227c8
 
 因为这几行代码来自原有代码，所以不提供模版，请根据上面的说明对应好对应的几行代码并复制粘贴到指定位置。 
 
-## <b>第三步：回到雅的身体 IB 部分，在 drawindex 行的前添加 英文分号 注释掉此行： </b>
+## 第三步：回到雅的身体 IB 部分，在 drawindex 行的前添加 英文分号 注释掉此行： 
 
 ```haskell
 [ResourceBodyVB] 
@@ -184,11 +184,11 @@ if vb0 == 3001
 ;drawindexed = 18519,130365,0
 ```
 
-<b>drawindex 问题 </b>
+drawindex 问题 
 
 最后再说明一下关于 drawindex 的问题： 
 
-如果你的身体部分做了拆分，<b>有很多个drawindex</b>，那么只改包含素体（皮肤）部分的drawindex就可以，一般就是身体IB部分的第一个drawindex。
+如果你的身体部分做了拆分，有很多个drawindex，那么只改包含素体（皮肤）部分的drawindex就可以，一般就是身体IB部分的第一个drawindex。
 
 ```haskell
 [ResourceBodyVB] 
@@ -221,25 +221,25 @@ endif
 
 ---
 
-# <b>艾莲改法 </b>
+# 艾莲改法 
 
-艾莲的跨IB渲染修改方法和星见雅相似，只是需要<b>增加一个cb1</b>来修复HairIB的模型偏移问题。
+艾莲的跨IB渲染修改方法和星见雅相似，只是需要增加一个cb1来修复HairIB的模型偏移问题。
 
-## <b>第一步：来到艾莲的 Hair 部分 </b>
+## 第一步：来到艾莲的 Hair 部分 
 
 添加下面几行代码： 
 
-<b>[ResourceEllenHairVB] </b>
+[ResourceEllenHairVB] 
 
-<b>[ResourceCaptureCB1] </b>
+[ResourceCaptureCB1] 
 
-<b>ResourceEllenHairVB = copy_vb0 </b>
+ResourceEllenHairVB = copy_vb0 
 
-<b>ResourceCaptureCB1 = copy_vs-cb1 unless_null </b>
+ResourceCaptureCB1 = copy_vs-cb1 unless_null 
 
 ```haskell
 [ResourceEllenHairVB] 
-<b>[ResourceCaptureCB1] </b>
+[ResourceCaptureCB1] 
 [TextureOverrideEllenHairA] 
 hash = d44a8015 
 handling = skip 
@@ -253,7 +253,7 @@ drawindexed = auto
 
 和星见雅相比，多了两行 vs-cb1 相关的代码。 
 
-## <b>第二步：来到艾莲的 Body 部分 </b>
+## 第二步：来到艾莲的 Body 部分 
 
 添加下面红框里的代码： 
 
@@ -271,7 +271,7 @@ ib = ResourceEllenHairAIB
 vb0 = ResourceEllenHairVB 
 vb1 = ResourceEllenHairTexcoord 
 ResourceTemp1 = ref vs-cb1 
-vs-cb1 = <b>ResourceCaptureCB1</b>
+vs-cb1 = ResourceCaptureCB1
 drawindexed = auto 
 vs-cb1 = ref ResourceTemp1
 ```
@@ -300,7 +300,7 @@ ib = ResourceEllenHairAIB
 
 ---
 
-# <b>贴图问题</b>
+# 贴图问题
 
 如果修改后你的模型贴图出现问题，可能是因为你的ini使用的是ps-t槽位指定的方法修改的贴图。
 

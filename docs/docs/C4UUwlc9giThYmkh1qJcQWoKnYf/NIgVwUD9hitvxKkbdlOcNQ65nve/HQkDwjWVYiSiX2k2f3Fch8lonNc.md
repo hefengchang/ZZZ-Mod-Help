@@ -12,9 +12,9 @@ sidebar_position: 6
 
 此教程介绍了去除角色的某些特效或者头发阴影的方法。
 
-一般来说，只需要找到用来绘制此<b>特效</b>的<b>PS或VS（着色器）的hash值</b>，然后skip掉即可，但这种方法很可能导致一些其他的东西也同时被隐藏掉，所以很建议加上角色活动状态的条件判断。
+一般来说，只需要找到用来绘制此特效的PS或VS（着色器）的hash值，然后skip掉即可，但这种方法很可能导致一些其他的东西也同时被隐藏掉，所以很建议加上角色活动状态的条件判断。
 
-由于<b>角色头发的阴影</b>一般也具有<b>单独的IB</b>，所以也可以使用IB的hash值进行隐藏，但建议使用<b>ib = null</b>的写法来代替直接使用handling = skip，这样可能避免一些问题，不过仍旧建议尽量再加上角色活动状态的条件判断，这样更加保险。
+由于角色头发的阴影一般也具有单独的IB，所以也可以使用IB的hash值进行隐藏，但建议使用ib = null的写法来代替直接使用handling = skip，这样可能避免一些问题，不过仍旧建议尽量再加上角色活动状态的条件判断，这样更加保险。
 
 另外，某些特效并不受单独的着色器控制，所以并不能用简单的PS或VS的hash值来隐藏，（比如此文的例子，月城柳的大招镜片反光效果），这时就需要使用dump去寻找与此特效相关的贴图文件，使用贴图的hash来进行隐藏。
 
@@ -22,7 +22,7 @@ sidebar_position: 6
 
 ## Hunting介绍
 
-首先，一切的前提是你会找hash值，也就是你的mod加载器有<b>hunting功能</b>（绿字界面），并且你会用。
+首先，一切的前提是你会找hash值，也就是你的mod加载器有hunting功能（绿字界面），并且你会用。
 
 XXMI启动器点击右上角齿轮图标打开设置，然后在这里打开：
 
@@ -42,7 +42,7 @@ XXMI启动器点击右上角齿轮图标打开设置，然后在这里打开：
 
 <img src="/assets/OAc2bQoY9oKYUuxUr5jctM2Ontd.png" src-width="534" src-height="392" align="center"/>
 
-<b>屏幕计数器补充知识：</b>
+屏幕计数器补充知识：
 
 PS：像素着色器，按小键盘1和2循环选择，按小键盘3复制。
 
@@ -58,11 +58,11 @@ CS：计算着色器，按小键盘“.”+1、2循环选择，按“.”+3复�
 
 ## 代码写法参考
 
-<b>注意事项：</b>
+注意事项：
 
-使用着色器（PS或VS）hash时的指令和使用贴图（以及IB和VB）hash时的指令写法不同，<b>着色器</b>使用 <b>[ShaderOverrideXXX]、贴图</b>使用<b> [TextureOverrideXXX]。</b>最简单的区分方法就是注意你使用的hash是<b>8位</b>（贴图/IB/VB）还是<b>16位</b>（PS/VS）。
+使用着色器（PS或VS）hash时的指令和使用贴图（以及IB和VB）hash时的指令写法不同，着色器使用 [ShaderOverrideXXX]、贴图使用 [TextureOverrideXXX]。最简单的区分方法就是注意你使用的hash是8位（贴图/IB/VB）还是16位（PS/VS）。
 
-一、使用<b>PS或VS的hash值</b>来隐藏特效的写法：
+一、使用PS或VS的hash值来隐藏特效的写法：
 
 [ShaderOverride.PS1]
 
@@ -70,7 +70,7 @@ hash = xxx<em>（16位hash值）</em>  hash = xxx（16 位 hash 值）
 
 handling = skip
 
-二、使用<b>贴图的hash值</b>来隐藏特效的写法：
+二、使用贴图的hash值来隐藏特效的写法：
 
 <em>（以隐藏月城柳的大招镜片反光效果为例，hash值已失效，仅供代码参考</em>）
 
@@ -92,7 +92,7 @@ hash = <del>a339897b</del>
 
 ps-t6 = null
 
-三、使用<b>IB的hash值</b>来隐藏头发阴影的写法：
+三、使用IB的hash值来隐藏头发阴影的写法：
 
 [TextureOverride.HairShadow.IB]
 

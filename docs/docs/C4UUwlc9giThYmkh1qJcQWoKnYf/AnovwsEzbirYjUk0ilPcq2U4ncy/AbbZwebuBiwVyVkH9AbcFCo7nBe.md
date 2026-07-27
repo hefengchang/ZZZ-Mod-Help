@@ -8,7 +8,7 @@ sidebar_position: 8
 
 # ini文件配置相关问题
 
-<b>需要对ini文件有一定的基础，推荐教程</b>
+需要对ini文件有一定的基础，推荐教程
 
 https://www.yuque.com/zelbert/egu6ei/zl842553hg456doh
 

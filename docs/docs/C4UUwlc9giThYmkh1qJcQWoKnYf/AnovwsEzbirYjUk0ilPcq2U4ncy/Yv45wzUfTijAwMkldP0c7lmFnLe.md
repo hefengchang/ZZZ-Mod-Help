@@ -22,7 +22,7 @@ sidebar_position: 3
      以下为示例代码（绿色部分为修改内容，任选其中一种即可）
 
 ```haskell
-<b>[TextureOverrideAliceHeadB]</b>
+[TextureOverrideAliceHeadB]
 hash = d131acb1
 match_first_index = 22074
 ib = ResourceAliceHeadBIB
@@ -62,12 +62,12 @@ run = CommandListSkinTexture
 方法1.手动在原ini文件的内容里添加run = CommandListSkinTexture一般在hash =的下一行
 
 ```haskell
-<b>[TextureOverride_IB_4a178546_xiaban_Component1]
-</b><b>hash = 4a178546</b>
-run = CommandListSkinTexture<b>
+[TextureOverride_IB_4a178546_xiaban_Component1]
+hash = 4a178546
+run = CommandListSkinTexture
 ;match_first_index = 0
 handling = skip
-</b><b>ib = Resource_4a178546_Component1</b>
+ib = Resource_4a178546_Component1
 
 [TextureOverrideCheckHash]
 hash = 4a178546
@@ -78,11 +78,11 @@ $active = 1
 方法2.将match_first_index =这一行的注释;取消掉
 
 ```haskell
-<b>[TextureOverride_IB_4a178546_xiaban_Component1]
+[TextureOverride_IB_4a178546_xiaban_Component1]
 hash = 4a178546
 match_first_index = 0
 handling = skip
-</b><b>ib = Resource_4a178546_Component1</b>
+ib = Resource_4a178546_Component1
 
 [TextureOverrideCheckHash]
 hash = 4a178546

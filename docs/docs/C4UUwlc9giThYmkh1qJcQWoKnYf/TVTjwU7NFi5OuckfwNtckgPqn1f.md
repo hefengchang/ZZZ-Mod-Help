@@ -7,25 +7,25 @@ sidebar_position: 1
 
 # 3DMigoto / ZZMI INI 文档指南
 
-本文档综合整理了适用于<b>绝区零 （ZZZ）</b>的 3DMigoto （ZZMI） 的 INI 配置文件说明，涵盖基础配置、Mod 结构、覆盖系统、快捷键绑定、高级技巧等内容。
+本文档综合整理了适用于绝区零 （ZZZ）的 3DMigoto （ZZMI） 的 INI 配置文件说明，涵盖基础配置、Mod 结构、覆盖系统、快捷键绑定、高级技巧等内容。
 
 ---
 
-# <b>概述</b>
+# 概述
 
-## <b>什么是 3DMigoto / ZZMI？</b>
+## 什么是 3DMigoto / ZZMI？
 
-- <b>**3DMigoto**</b> 是一个 DirectX 11 API 钩子（hook）工具，最初用于 NVIDIA 3D Vision 立体驱动修复，后来被广泛用于游戏 Mod 制作。
+- **3DMigoto** 是一个 DirectX 11 API 钩子（hook）工具，最初用于 NVIDIA 3D Vision 立体驱动修复，后来被广泛用于游戏 Mod 制作。
 
-- <b>**GIMI （GI-Model-Importer）**</b> 是由 SilentNightSound 基于 3DMigoto 二次开发的分支，专门针对米哈游游戏（原神、崩坏：星穹铁道、绝区零）优化，增加了模型导入/导出、纹理替换等 Mod 功能。
+- **GIMI （GI-Model-Importer）** 是由 SilentNightSound 基于 3DMigoto 二次开发的分支，专门针对米哈游游戏（原神、崩坏：星穹铁道、绝区零）优化，增加了模型导入/导出、纹理替换等 Mod 功能。
 
-- <b>**ZZMI**</b> 是 GIMI 针对绝区零的进一步适配版本。
+- **ZZMI** 是 GIMI 针对绝区零的进一步适配版本。
 
-## <b>工作原理</b>
+## 工作原理
 
-3DMigoto 通过注入到游戏进程，拦截 DirectX 11 的绘制调用（Draw Call）。用户在 INI 文件中通过 <b>**Hash 值**</b> 定位特定的纹理、顶点缓冲或着色器，然后指定替换资源或跳过绘制，从而实现模型/纹理替换。
+3DMigoto 通过注入到游戏进程，拦截 DirectX 11 的绘制调用（Draw Call）。用户在 INI 文件中通过 **Hash 值** 定位特定的纹理、顶点缓冲或着色器，然后指定替换资源或跳过绘制，从而实现模型/纹理替换。
 
-## <b>版本选择</b>
+## 版本选择
 
 GIMI 提供两个版本：
 
@@ -36,41 +36,41 @@ GIMI 提供两个版本：
 <col width="620"/>
 </colgroup>
 <tbody>
-<tr><td><p><b>ForDevelopment</b></p></td><td><p>Mod 制作者 </p></td><td><p>启用狩猎模式（Hunting Mode）、屏幕绿色调试信息，功能完整但性能稍慢</p></td></tr>
-<tr><td><p><b>ForPlaying</b></p></td><td><p>普通玩家</p></td><td><p>关闭开发功能，运行效率更高</p></td></tr>
+<tr><td><p>ForDevelopment</p></td><td><p>Mod 制作者 </p></td><td><p>启用狩猎模式（Hunting Mode）、屏幕绿色调试信息，功能完整但性能稍慢</p></td></tr>
+<tr><td><p>ForPlaying</p></td><td><p>普通玩家</p></td><td><p>关闭开发功能，运行效率更高</p></td></tr>
 </tbody>
 </table>
 
 ---
 
-# <b>安装与初始配置</b>
+# 安装与初始配置
 
-## <b>下载与解压</b>
+## 下载与解压
 
 1.从https://github.com/leotorrez/ZZ-Model-Importer 下载对应版本。
 
-2.将压缩包解压到 <b>**非游戏根目录**</b> 的文件夹（例如 `D:\3DMigoto\ZZZ\`），避免被反作弊系统扫描。
+2.将压缩包解压到 **非游戏根目录** 的文件夹（例如 `D:\3DMigoto\ZZZ\`），避免被反作弊系统扫描。
 
-## <b>编辑 d3dx.ini</b>
+## 编辑 d3dx.ini
 
 用任意文本编辑器打开 `d3dx.ini`，进行以下修改：
 
-### <b>步骤一：设置目标进程</b>
+### 步骤一：设置目标进程
 
 找到 `[Loader]` 节，修改或添加：
 
 ```toml
-<b>[Loader]</b>
+[Loader]
 target = ZenlessZoneZero.exe
 launch = D:\Games\ZenlessZoneZero\ZenlessZoneZero.exe
 ```
 
-### <b>步骤二：修改 CommandListSkin</b>
+### 步骤二：修改 CommandListSkin
 
 找到 `[CommandListSkin]`和`[CommandListSkinTexture]`（如果没有则新建），修改为以下内容：
 
 ```toml
-<b>[CommandListSkin]
+[CommandListSkin]
 if $costume_mods
         checktextureoverride = ps-t0
         checktextureoverride = vb0
@@ -94,14 +94,14 @@ if $costume_mods
         checktextureoverride = ps-t9
         checktextureoverride = ps-t10
         x140 = 0
-</b><b>endif</b>
+endif
 ```
 
-&gt; <b>**注意**</b>：某些教程写的是 `[CommandListskinl]`（末尾是小写 L），但标准写法是 `[CommandListSkin]`，两种写法在 3DMigoto 中都可能生效，建议使用标准写法。
+&gt; **注意**：某些教程写的是 `[CommandListskinl]`（末尾是小写 L），但标准写法是 `[CommandListSkin]`，两种写法在 3DMigoto 中都可能生效，建议使用标准写法。
 
-## <b>启动游戏</b>
+## 启动游戏
 
-1. <b>**以管理员身份**</b> 运行 `3DMigoto Loader.exe`。
+1. **以管理员身份** 运行 `3DMigoto Loader.exe`。
 
 - 出现黑色命令行窗口，提示 `3DMigoto ready - Now run the game.`
 
@@ -111,9 +111,9 @@ if $costume_mods
 
 ---
 
-# <b>INI 文件基础</b>
+# INI 文件基础
 
-## <b>文件结构</b>
+## 文件结构
 
 INI 文件由三要素构成：
 
@@ -121,11 +121,11 @@ INI 文件由三要素构成：
 <em>; 注释 — 以分号开头，用于说明</em>
 <em>; ====================================</em>
 
-<b>[节名称]</b>             <em>； 方括号定义节（Section）</em>
+[节名称]             <em>； 方括号定义节（Section）</em>
 键名 = 值            <em>； 节内的属性（Property）/ 键值对</em>
 ```
 
-## <b>节类型分类</b>
+## 节类型分类
 
 <table>
 <colgroup>
@@ -134,26 +134,26 @@ INI 文件由三要素构成：
 <col width="390"/>
 </colgroup>
 <tbody>
-<tr><td><p><b>常规节</b></p></td><td><p>唯一键，后值覆盖前值 </p></td><td><p><code>[Loader]</code>， <code>[Logging]</code>， <code>[Constants]</code></p></td></tr>
-<tr><td><p><b>命令列表节</b></p></td><td><p>允许多个相同键名，有序执行</p></td><td><p><code>[CommandListSkin]</code>， <code>[CommandListXxx]</code> </p></td></tr>
-<tr><td><p><b>覆盖节</b></p></td><td><p> 以 <code>ShaderOverride</code> 或 <code>TextureOverride</code> 开头，可有多实例 </p></td><td><p><code>[TextureOverrideBody]</code>， <code>[ShaderOverrideRemove]</code> </p></td></tr>
-<tr><td><p><b>资源节</b></p></td><td><p> 以 <code>Resource</code> 开头，定义外部资源</p></td><td><p><code>[ResourceBodyVB]</code>， <code>[ResourceDiffuse]</code> |</p></td></tr>
+<tr><td><p>常规节</p></td><td><p>唯一键，后值覆盖前值 </p></td><td><p><code>[Loader]</code>， <code>[Logging]</code>， <code>[Constants]</code></p></td></tr>
+<tr><td><p>命令列表节</p></td><td><p>允许多个相同键名，有序执行</p></td><td><p><code>[CommandListSkin]</code>， <code>[CommandListXxx]</code> </p></td></tr>
+<tr><td><p>覆盖节</p></td><td><p> 以 <code>ShaderOverride</code> 或 <code>TextureOverride</code> 开头，可有多实例 </p></td><td><p><code>[TextureOverrideBody]</code>， <code>[ShaderOverrideRemove]</code> </p></td></tr>
+<tr><td><p>资源节</p></td><td><p> 以 <code>Resource</code> 开头，定义外部资源</p></td><td><p><code>[ResourceBodyVB]</code>， <code>[ResourceDiffuse]</code> |</p></td></tr>
 </tbody>
 </table>
 
-## <b>命名规范</b>
+## 命名规范
 
-- 节名称 <b>**不区分大小写**</b>：`[textureoverridebody]` 等价于 `[TextureOverrideBody]`
+- 节名称 **不区分大小写**：`[textureoverridebody]` 等价于 `[TextureOverrideBody]`
 
 - 自定义名称中建议使用字母、数字和下划线，避免特殊字符
 - 注释以 英文`;` 开始（必须单独一行或行尾，行尾注释需注意兼容性）
 
-## <b>包含机制</b>
+## 包含机制
 
 `[Include]` 节允许模块化加载配置：
 
 ```toml
-<b>[Include]</b>
+[Include]
 include_recursive = Mods                        <em>; 递归加载 Mods 下所有 。ini 文件</em>
 exclude_recursive = DISABLED*                   <em>; 排除以 DISABLED 开头的文件</em>
 include = ShaderFixes\auto_convergence.ini      <em>; 加载特定文件</em>
@@ -162,21 +162,21 @@ condition = (1==1)                              <em>; PCRE2 条件表达式，�
 ---
 ```
 
-# <b>主配置 d3dx.ini 详解</b>
+# 主配置 d3dx.ini 详解
 
-## <b>[Loader] — 加载器设置</b>
+## [Loader] — 加载器设置
 
 ```toml
-<b>[Loader]</b>
+[Loader]
 target = ZenlessZoneZero.exe    <em>; 目标进程（必须配置）</em>
 launch =                        <em>; 自动启动游戏的可执行文件路径</em>
 timeout = 20                    <em>; 等待目标进程的超时时间（秒）</em>
 ```
 
-## <b>[Logging] — 日志控制</b>
+## [Logging] — 日志控制
 
 ```toml
-<b>[Logging]</b>
+[Logging]
 calls = 0               <em>; 记录所有 API 调用（1=开， 0=关）</em>
 input = 0               <em>; 记录按键输入</em>
 debug = 0               <em>; 超详细调试日志</em>
@@ -185,10 +185,10 @@ separation = 0          <em>; 记录立体分离度变化</em>
 debug_locks = 0         <em>; 死锁检测日志</em>
 ```
 
-## <b>[Constants] — 全局常量与变量</b>
+## [Constants] — 全局常量与变量
 
 ```toml
-<b>[Constants]</b>
+[Constants]
 <em>; 全局变量（所有 INI 文件可见）</em>
 global $costume_mods = 1    <em>; 服饰 Mod 总开关</em>
 
@@ -208,10 +208,10 @@ run = CommandListInit
 post run = CommandListPostInit    <em>; 在 d3dx_user.ini 加载后执行</em>
 ```
 
-## <b>[Rendering] — 渲染管线设置</b>
+## [Rendering] — 渲染管线设置
 
 ```toml
-<b>[Rendering]</b>
+[Rendering]
 shader_hash = 3dmigoto/embedded/bytecode   <em>; Hash 计算方法</em>
 texture_hash = 1                            <em>; 纹理 Hash 算法版本（1=新版）</em>
 override_directory = ShaderFixes            <em>; 自定义着色器目录</em>
@@ -221,10 +221,10 @@ ini_params = 120                            <em>; IniParams 纹理寄存器槽�
 rasterizer_disable_scissor = 0              <em>; 全局禁用裁剪测试</em>
 ```
 
-## <b>[Device] — 显示与分辨率</b>
+## [Device] — 显示与分辨率
 
 ```toml
-<b>[Device]</b>
+[Device]
 width = 1920                <em>; 强制宽度</em>
 height = 1080               <em>; 强制高度</em>
 full_screen = 0             <em>; 强制全屏（0=窗口， 1=全屏， 2=无边框）</em>
@@ -233,27 +233,27 @@ upscaling = 0               <em>; 启用升采样</em>
 get_resolution_from = swap_chain    <em>; 分辨率来源</em>
 ```
 
-## <b>[Present] — 每帧执行</b>
+## [Present] — 每帧执行
 
 ```toml
-<b>[Present]</b>
+[Present]
 run = CommandListPerFrame       <em>; 每帧开头执行的命令列表</em>
 post run = CommandListPostFrame <em>; 每帧末尾执行的命令列表</em>
 ```
 
-## <b>[System] — 运行时行为</b>
+## [System] — 运行时行为
 
 ```toml
-<b>[System]</b>
+[System]
 check_foreground_window = 1     <em>; 仅在游戏窗口在前台时处理输入</em>
 load_library_redirect = 0       <em>; DLL 加载链控制</em>
 hook = recommended              <em>; 使用钩子而非包装器</em>
 ---
 ```
 
-# <b>Mod 文件夹结构</b>
+# Mod 文件夹结构
 
-## <b>标准布局</b>
+## 标准布局
 
 每个 Mod 放在 `Mods` 目录下的独立子文件夹中：
 
@@ -271,7 +271,7 @@ Mods/
 └── DISABLED_OldMod/                  ; 文件名含 DISABLED 则被排除，不被加载
 ```
 
-## <b>多部件 Mod 的推荐结构</b>
+## 多部件 Mod 的推荐结构
 
 ```toml
 Mods/
@@ -286,27 +286,27 @@ Mods/
 │   └── DressDiffuse.dds
 ```
 
-## <b>加载规则</b>
+## 加载规则
 
 - 3DMigoto 启动时递归加载 `Mods/` 下所有 `.ini` 文件
 
-- 游戏内按 <b>**F10**</b> 热加载所有 Mod（无需重启游戏）
+- 游戏内按 **F10** 热加载所有 Mod（无需重启游戏）
 
 - 每个角色同一时间只能应用一个 Mod（因为共享 Hash 值会冲突）
 - 禁用 Mod：将文件夹名或 `.ini` 文件名标记为 `DISABLED`（如 `DISABLED_OldMod.ini`）或添加 `.disabled` 后缀
 
 ---
 
-# <b>TextureOverride — 纹理覆盖系统</b>
+# TextureOverride — 纹理覆盖系统
 
-## <b>基本语法</b>
+## 基本语法
 
 ```toml
-<b>[TextureOverrideCustomName]</b>     <em>; </em><b>CustomName</b><em>名称自定义，可任意起名</em>
+[TextureOverrideCustomName]     <em>; </em>CustomName<em>名称自定义，可任意起名</em>
 hash = 12345678ABCDEF00         <em>; 要覆盖的纹理/缓冲 Hash 值（8位或16位进制）</em>
 ```
 
-## <b>核心参数</b>
+## 核心参数
 
 <table>
 <colgroup>
@@ -315,7 +315,7 @@ hash = 12345678ABCDEF00         <em>; 要覆盖的纹理/缓冲 Hash 值（8位�
 <col width="434"/>
 </colgroup>
 <tbody>
-<tr><td><p> <code>hash</code></p></td><td><p>UINT64 （hex）</p></td><td><p><b><strong>必需</strong></b>。要匹配的纹理/缓冲 Hash 值</p></td></tr>
+<tr><td><p> <code>hash</code></p></td><td><p>UINT64 （hex）</p></td><td><p><strong>必需</strong>。要匹配的纹理/缓冲 Hash 值</p></td></tr>
 <tr><td><p><code>handling</code></p></td><td><p>string </p></td><td><p><code>skip</code> = 跳过原始绘制；<code>default</code> = 正常绘制</p></td></tr>
 <tr><td><p><code>drawindexed</code></p></td><td><p><code>auto</code> / 其他</p></td><td><p><code>auto</code> = 自动绘制自定义资源 </p></td></tr>
 <tr><td><p><code>match_first_index</code></p></td><td><p>int</p></td><td><p>匹配第一个索引（用于同一缓冲中的多对象区分）</p></td></tr>
@@ -337,7 +337,7 @@ hash = 12345678ABCDEF00         <em>; 要覆盖的纹理/缓冲 Hash 值（8位�
 </tbody>
 </table>
 
-## <b>纹理槽 （ps-t） 说明</b>
+## 纹理槽 （ps-t） 说明
 
 <table>
 <colgroup>
@@ -358,12 +358,12 @@ hash = 12345678ABCDEF00         <em>; 要覆盖的纹理/缓冲 Hash 值（8位�
 </tbody>
 </table>
 
-各槽位的具体用途取决于游戏的着色器实现，建议通过 <b>**框架分析 （Frame Analysis）**</b> 确认。
+各槽位的具体用途取决于游戏的着色器实现，建议通过 **框架分析 （Frame Analysis）** 确认。
 
-## <b>基本替换示例</b>
+## 基本替换示例
 
 ```toml
-<b>[TextureOverrideCharacterBody]</b>
+[TextureOverrideCharacterBody]
 hash = 12345678
 match_first_index = 0
 run = CommandListSkinTexture       <em>; 匹配从索引 0 开始的绘制</em>
@@ -375,21 +375,21 @@ ps-t6 = ResourceBodyMaterialMap
 drawindexed = auto
 ```
 
-## <b>跳过绘制（移除部件）</b>
+## 跳过绘制（移除部件）
 
 ```toml
-<b>[TextureOverrideRemoveHat]</b>
+[TextureOverrideRemoveHat]
 hash = 87654321
 handling = skip            <em>; 跳过该 Hash 对应的绘制，部件消失</em>
 ```
 
-## <b>部件区分（match_first_index）</b>
+## 部件区分（match_first_index）
 
 当多个模型部件共享同一个顶点/索引缓冲时，通过 `match_first_index` 区分：
 
 ```toml
 <em>; 身体部位 — 索引范围从 0 开始</em>
-<b>[TextureOverrideBody]</b>
+[TextureOverrideBody]
 hash = AAAA0000
 match_first_index = 0
 match_index_count = 1500
@@ -401,7 +401,7 @@ ps-t6 = ResourceBodyMaterialMap
 drawindexed = auto
 
 <em>; 头发部位 — 索引范围从 1500 开始</em>
-<b>[TextureOverrideHair]</b>
+[TextureOverrideHair]
 hash = AAAA0000
 match_first_index = 1500
 match_index_count = 600
@@ -413,10 +413,10 @@ ps-t6 = ResourceBodyMaterialMap2
 drawindexed = auto
 ```
 
-## <b>多纹理槽覆盖</b>
+## 多纹理槽覆盖
 
 ```toml
-<b>[TextureOverrideComplex]</b>
+[TextureOverrideComplex]
 hash = BBBB1111
 ps-t3 = ResourceDiffuse
 ps-t4 = ResourceNormalMap
@@ -427,16 +427,16 @@ ps-t18 = ResourceFXMap
 run = CommandListSkinTexture
 ```
 
-# <b>ShaderOverride — 着色器覆盖系统</b>
+# ShaderOverride — 着色器覆盖系统
 
-## <b>基本语法</b>
+## 基本语法
 
 ```toml
-<b>[ShaderOverrideCustomName]</b>
+[ShaderOverrideCustomName]
 hash = 1122334455667788       <em>; 着色器的 Hash 值</em>
 ```
 
-## <b>核心参数</b>
+## 核心参数
 
 <table>
 <colgroup>
@@ -461,10 +461,10 @@ hash = 1122334455667788       <em>; 着色器的 Hash 值</em>
 </tbody>
 </table>
 
-## <b>跳过着色器（移除特效）</b>
+## 跳过着色器（移除特效）
 
 ```toml
-<b>[ShaderOverrideRemoveOutline]</b>
+[ShaderOverrideRemoveOutline]
 hash = A1B2C3D4E5F60001
 handling = skip
 ```
@@ -474,53 +474,53 @@ handling = skip
 当 `TextureOverride` 的贴图替换不生效时，通常需要为对应的着色器添加 `run = CommandListSkinTexture`：
 
 ```toml
-<b>[ShaderOverrideFixTexture]</b>
+[ShaderOverrideFixTexture]
 hash = 对应 PS 的 Hash 值
 run = CommandListSkinTexture
 ```
 
-## <b>处理重复 Hash</b>
+## 处理重复 Hash
 
 当多个着色器具有相同的 Hash 值但需要不同处理时：
 
 ```toml
-<b>[ShaderOverrideCase1]</b>
+[ShaderOverrideCase1]
 hash = AAAA0000AAAA0000
 allow_duplicate_hash = true
 checktextureoverride = ps-t0     <em>; 当 ps-t0 被覆盖时匹配</em>
-<b>[ShaderOverrideCase2]</b>
+[ShaderOverrideCase2]
 hash = AAAA0000AAAA0000
 allow_duplicate_hash = true
 checktextureoverride = ps-t2     <em>; 当 ps-t2 被覆盖时匹配</em>
 ```
 
-# <b>Resource — 资源定义</b>
+# Resource — 资源定义
 
-<b>纹理资源</b>
+纹理资源
 
 ```toml
-<b>[ResourceBodyDiffuse]</b>
+[ResourceBodyDiffuse]
 filename = Texture/BodyDiffuse.dds           <em>; 文件路径（相对于 Mod 文件夹）</em>
-<b>[ResourceBodyLightMap]</b>
+[ResourceBodyLightMap]
 filename = Texture/BodyLightMap.dds
 ```
 
 支持的纹理格式：`.dds `（推荐，支持 DXT1/3/5、BC7(sRGB,DX 11+) 等压缩格式）。
 
-## <b>顶点缓冲资源 （VB）</b>
+## 顶点缓冲资源 （VB）
 
 ```toml
-<b>[ResourceBodyPosition]</b>
+[ResourceBodyPosition]
 type = Buffer
 stride = 40          <em>; 每个顶点的字节数（关键参数，需与原始一致）</em>
 filename = Buffer/BodyPosition.buf  <em>; 顶点缓冲文件路径</em>
 
-<b>[ResourceBodyTexcoord]</b>
+[ResourceBodyTexcoord]
 type = Buffer
 stride = 20
 filename = Buffer/BodyTexcoord.buf
 
-[Resource<b>BodyBlend</b>]
+[ResourceBodyBlend]
 type = Buffer
 stride = 32
 filename = Buffer/BodyBlend.buf
@@ -529,10 +529,10 @@ filename = Buffer/BodyBlend.buf
 - `stride`（步长）必须与原始缓冲完全一致，否则模型变形
 - 顶点缓冲文件的二进制格式需通过 3DMigoto 的工具导出
 
-## <b>索引缓冲资源 （IB）</b>
+## 索引缓冲资源 （IB）
 
 ```toml
-<b>[ResourceBodyIB]</b>
+[ResourceBodyIB]
 type = Buffer
 format = DXGI_FORMAT_R32_UINT    <em>; 索引格式（32 位或 16 位）</em>
 filename = Buffer/Body.ib               <em>; 索引缓冲文件路径</em>
@@ -544,25 +544,25 @@ filename = Buffer/Body.ib               <em>; 索引缓冲文件路径</em>
 | `DXGI_FORMAT_R32_UINT` | 32 位无符号整数（常用） |
 | `DXGI_FORMAT_R16_UINT` | 16 位无符号整数（较少） |
 
-## <b>内联数据资源</b>
+## 内联数据资源
 
 ```toml
-<b>[ResourceInlineData]</b>
+[ResourceInlineData]
 type = Buffer
 format = DXGI_FORMAT_R32_UINT
 data = "0x00000000 0x00000000 0x00000000"   <em>; 内联十六进制数据</em>
 ```
 
-# <b>CommandList — 命令列表</b>
+# CommandList — 命令列表
 
-## <b>基本语法</b>
+## 基本语法
 
 ```toml
-<b>[CommandListCustomName]</b>
+[CommandListCustomName]
 <em>; 顺序执行的命令</em>
 ```
 
-## <b>支持的命令</b>
+## 支持的命令
 
 <table>
 <colgroup>
@@ -582,10 +582,10 @@ data = "0x00000000 0x00000000 0x00000000"   <em>; 内联十六进制数据</em>
 </tbody>
 </table>
 
-## <b>条件控制</b>
+## 条件控制
 
 ```toml
-<b>[CommandListConditional]</b>
+[CommandListConditional]
 if $costume_mods
     checktextureoverride = ps-t0
     checktextureoverride = ps-t1
@@ -604,7 +604,7 @@ endif
 - `(条件1) && (条件2)` — 与运算
 - `(条件1) || (条件2)` — 或运算
 
-## <b>ZZZ 的标准 CommandListSkin</b>
+## ZZZ 的标准 CommandListSkin
 
 这是 ZZZ Mod 运行的核心命令列表，确保贴图和缓冲替换生效：
 
@@ -621,7 +621,7 @@ if $costume_mods
 endif
 ```
 
-## <b>CommandListSkinTexture</b>
+## CommandListSkinTexture
 
 与原神/GIMI 兼容的命令列表，按需运行在单个 TextureOverride 中：
 
@@ -644,18 +644,18 @@ endif
 
 在 Mod 的 INI 文件中通过 `run = CommandListSkinTexture` 调用。
 
-# <b>Key / Preset — 按键绑定与预设</b>
+# Key / Preset — 按键绑定与预设
 
-## <b>基本语法</b>
+## 基本语法
 
 ```toml
-<b>[Key_MyModToggle]</b>
+[Key_MyModToggle]
 key = F7                   <em>; 绑定的按键</em>
 type = cycle               <em>; 按键模式：toggle / activate / hold / cycle</em>
 $bottom = 0,1,2            <em>; 切换变量（三元表达式）</em>
 ```
 
-## <b>按键模式 （type）</b>
+## 按键模式 （type）
 
 <table>
 <colgroup>
@@ -671,7 +671,7 @@ $bottom = 0,1,2            <em>; 切换变量（三元表达式）</em>
 </tbody>
 </table>
 
-## <b>按键语法</b>
+## 按键语法
 
 <table>
 <colgroup>
@@ -692,12 +692,12 @@ $bottom = 0,1,2            <em>; 切换变量（三元表达式）</em>
 </tbody>
 </table>
 
-## <b>过渡动画 （transition）</b>
+## 过渡动画 （transition）
 
 用于立体参数（separation/convergence）的平滑过渡：
 
 ```toml
-<b>[Key_ConvergenceAdjust]</b>
+[Key_ConvergenceAdjust]
 key = VK_OEM_PERIOD           <em>; 句号键</em>
 type = hold
 separation = -0.1
@@ -707,39 +707,39 @@ release_transition = 200      <em>; 释放后恢复时间</em>
 transition_type = cosine      <em>; linear / cosine（线性/余弦缓动）</em>
 ```
 
-## <b>预设系统 （Preset）</b>
+## 预设系统 （Preset）
 
 ```toml
-<b>[Preset_MyModStyleA]</b>
+[Preset_MyModStyleA]
 $outfit_style = 0
 $color_scheme = 1
 
-<b>[Preset_MyModStyleB]</b>
+[Preset_MyModStyleB]
 $outfit_style = 1
 $color_scheme = 2
 
-<b>[Key_CycleStyle]</b>
+[Key_CycleStyle]
 key = F6
 type = cycle
 preset = Preset_MyModStyleA, Preset_MyModStyleB
 wrap = true       <em>; 到达末尾后回到开头</em>
 ```
 
-## <b>实用示例：贴图切换</b>
+## 实用示例：贴图切换
 
 ```toml
 <em>; 定义全局开关变量</em>
-<b>[Constants]</b>
+[Constants]
 global $show_mod = 1
 
 <em>; 定义按键切换</em>
-<b>[Key_ToggleMod]</b>
+[Key_ToggleMod]
 key = F7
 type = cycle
 $socks = 0,1
 
 <em>; 在 TextureOverride 中使用</em>
-<b>[TextureOverrideBody]</b>
+[TextureOverrideBody]
 hash = 12345678ABCDEF00
 if $socks == 0
     ps-t3 = ResourceModDiffuse
@@ -748,9 +748,9 @@ elseif $socks == 1
 endif
 ```
 
-# <b>Custom Variables / IniParams — 自定义变量与着色器参数</b>
+# Custom Variables / IniParams — 自定义变量与着色器参数
 
-## <b>变量作用域</b>
+## 变量作用域
 
 <table>
 <colgroup>
@@ -759,29 +759,29 @@ endif
 <col width="380"/>
 </colgroup>
 <tbody>
-<tr><td><p><b>全局</b></p></td><td><p><code>global $name = value</code></p></td><td><p>所有 INI 文件可见 </p></td></tr>
-<tr><td><p><b>持久化</b></p></td><td><p>`global persist $name = valu</p></td><td><p>全局 + 自动保存到 <code>d3dx_user.ini</code></p></td></tr>
-<tr><td><p><b>命名空间</b></p></td><td><p><code>$\namespace\name = value</code></p></td><td><p>带命名空间隔离的全局变量</p></td></tr>
-<tr><td><p><b>局部</b></p></td><td><p><code>$name = value</code></p></td><td><p>仅在当前命令列表内有效</p></td></tr>
+<tr><td><p>全局</p></td><td><p><code>global $name = value</code></p></td><td><p>所有 INI 文件可见 </p></td></tr>
+<tr><td><p>持久化</p></td><td><p>`global persist $name = valu</p></td><td><p>全局 + 自动保存到 <code>d3dx_user.ini</code></p></td></tr>
+<tr><td><p>命名空间</p></td><td><p><code>$\namespace\name = value</code></p></td><td><p>带命名空间隔离的全局变量</p></td></tr>
+<tr><td><p>局部</p></td><td><p><code>$name = value</code></p></td><td><p>仅在当前命令列表内有效</p></td></tr>
 </tbody>
 </table>
 
-## <b>变量运算</b>
+## 变量运算
 
 ```toml
-<b>[CommandListCalc]</b>
+[CommandListCalc]
 $count = $count + 1           <em>; 递增</em>
 $enabled = $enabled ? 0 : 1   <em>; 切换（三元运算）</em>
 $result = $$a + $$b * 2         <em>; 四则运算</em>
 $value = ($x > 0.5) ? 1 : 0   <em>; 条件运算</em>
 ```
 
-## <b>IniParams — 向着色器传递参数</b>
+## IniParams — 向着色器传递参数
 
 IniParams 通过 `t120` 纹理寄存器暴露给像素/顶点着色器：
 
 ```toml
-<b>[Constants]</b>
+[Constants]
 <em>; 第 0 组 （x， y， z， w） — 对应 IniParams[0] （XMFLOAT4）</em>
 x = 0.0          <em>; 向量第 0 个分量</em>
 y = 0.5          <em>; 向量第 1 个分量</em>
@@ -795,33 +795,33 @@ z1 = 3.0
 w1 = 4.0
 ```
 
-## <b>实用变量示例</b>
+## 实用变量示例
 
 ```toml
-<b>[Constants]</b>
+[Constants]
 global $costume_mods = 1        <em>; Mod 总开关</em>
 global $show_hat = 1            <em>; 帽子显示开关</em>
 global $skin_tone = 0           <em>; 肤色选项（0/1/2）</em>
 global persist $volume = 0.8    <em>; 持久化设置（保存到用户配置文件）</em>
 
 <em>; 通过命令列表设置</em>
-<b>[CommandListSetVariables]</b>
+[CommandListSetVariables]
 $costume_mods = 1
 $show_hat = 0
 ```
 
-# <b>Hunting — 狩猎模式与 Hash 获取</b>
+# Hunting — 狩猎模式与 Hash 获取
 
-狩猎模式是 Mod 制作者定位游戏资源的核心功能。仅 <b>**ForDevelopment**</b> 版本可用。
+狩猎模式是 Mod 制作者定位游戏资源的核心功能。仅 **ForDevelopment** 版本可用。
 
-## <b>进入狩猎模式</b>
+## 进入狩猎模式
 
 - 游戏中按数字 `0`进入/退出狩猎模式
 
 - 进入后游戏左下角显示绿色调试文字
 - 屏幕上方显示当前浏览的资源类型和编号
 
-## <b>快捷键速查</b>
+## 快捷键速查
 
 <table>
 <colgroup>
@@ -830,18 +830,18 @@ $show_hat = 0
 </colgroup>
 <tbody>
 <tr><td><p>按键</p></td><td><p>功能</p></td></tr>
-<tr><td><p><code>/</code> 和<code>*</code>（小键盘）</p></td><td><p>循环浏览 <b><strong>VB （Vertex Buffer）</strong></b> — 顶点缓冲 </p></td></tr>
-<tr><td><p><code>7</code> 和<code>8</code>（小键盘</p></td><td><p>循环浏览 <b><strong>IB （Index Buffer）</strong></b> — 索引缓冲</p></td></tr>
-<tr><td><p><code>4</code> 和 <code>5</code>（小键盘）</p></td><td><p>循环浏览 <b><strong>VS （Vertex Shader）</strong></b> — 顶点着色器</p></td></tr>
-<tr><td><p><code>1</code> 和 <code>2</code>（小键盘</p></td><td><p>循环浏览 <b><strong>PS （Pixel Shader）</strong></b> — 像素着色器</p></td></tr>
-<tr><td><p><code>9</code>（小键盘）</p></td><td><p><b><strong>复制当前 IB 的 Hash</strong></b> 到剪贴板</p></td></tr>
-<tr><td><p><code>6</code>（小键盘）</p></td><td><p><b><strong>复制当前 VS 的 Hash</strong></b> 到剪贴板 </p></td></tr>
-<tr><td><p><code>3</code>（小键盘）</p></td><td><p><b><strong>复制当前 PS 的 Hash</strong></b> 到剪贴板</p></td></tr>
+<tr><td><p><code>/</code> 和<code>*</code>（小键盘）</p></td><td><p>循环浏览 <strong>VB （Vertex Buffer）</strong> — 顶点缓冲 </p></td></tr>
+<tr><td><p><code>7</code> 和<code>8</code>（小键盘</p></td><td><p>循环浏览 <strong>IB （Index Buffer）</strong> — 索引缓冲</p></td></tr>
+<tr><td><p><code>4</code> 和 <code>5</code>（小键盘）</p></td><td><p>循环浏览 <strong>VS （Vertex Shader）</strong> — 顶点着色器</p></td></tr>
+<tr><td><p><code>1</code> 和 <code>2</code>（小键盘</p></td><td><p>循环浏览 <strong>PS （Pixel Shader）</strong> — 像素着色器</p></td></tr>
+<tr><td><p><code>9</code>（小键盘）</p></td><td><p><strong>复制当前 IB 的 Hash</strong> 到剪贴板</p></td></tr>
+<tr><td><p><code>6</code>（小键盘）</p></td><td><p><strong>复制当前 VS 的 Hash</strong> 到剪贴板 </p></td></tr>
+<tr><td><p><code>3</code>（小键盘）</p></td><td><p><strong>复制当前 PS 的 Hash</strong> 到剪贴板</p></td></tr>
 <tr><td><p><code>-</code>（小键盘减号）</p></td><td><p>标记当前资源</p></td></tr>
 </tbody>
 </table>
 
-## <b>狩猎操作流程</b>
+## 狩猎操作流程
 
 以替换角色身体贴图为例：
 
@@ -853,13 +853,13 @@ $show_hat = 0
 6. 按 `0` 退出狩猎模式
 7. 将复制的 Hash 填入 `[TextureOverrideX]` 的 `hash =`
 
-## <b>框架分析 （Frame Analysis）</b>
+## 框架分析 （Frame Analysis）
 
 当狩猎模式不足以定位资源时，使用框架分析：
 
 ```toml
 <em>; 在 Mod 的 INI 文件中添加</em>
-<b>[CommandListAnalyse]</b>
+[CommandListAnalyse]
 dump = dump_rt dump_tex dump_cb dump_vb dump_ib buf txt dds
 ```
 
@@ -868,45 +868,45 @@ dump = dump_rt dump_tex dump_cb dump_vb dump_ib buf txt dds
 3. 在 `FrameAnalysis-YYYY-MM-DD-HHMMSS` 文件夹中查看分析结果
 4. 搜索相关 Hash，确认 ps-t 槽位及着色器 Hash
 
-## <b>关于 Hash 的注意事项</b>
+## 关于 Hash 的注意事项
 
-- <b>**显存不同 Hash 不同**</b>：显卡显存 ≥ 4GB（高显）与 &lt; 4GB（低显）的 Hash 不同
+- **显存不同 Hash 不同**：显卡显存 ≥ 4GB（高显）与 &lt; 4GB（低显）的 Hash 不同
 
-- <b>**服务器版本影响**</b>：国服/国际服/亚服的 Hash 可能不同
+- **服务器版本影响**：国服/国际服/亚服的 Hash 可能不同
 
-- <b>**游戏版本影响**</b>：每次游戏更新后 Hash 可能变化
+- **游戏版本影响**：每次游戏更新后 Hash 可能变化
 
 - Mod 作者分享时需注明对应版本，使用者需自行确认 Hash 是否一致
 
 ---
 
-# <b>Present — 每帧执行</b>
+# Present — 每帧执行
 
-## <b>基本用法</b>
+## 基本用法
 
 ```toml
-<b>[Present]</b>
+[Present]
 run = CommandListFrameStart    <em>; 每帧开始时执行</em>
 post run = CommandListFrameEnd <em>; 每帧结束时执行</em>
 ```
 
-## <b> 应用场景</b>
+##  应用场景
 
 - 持续的变量监控和更新
 - 每帧状态检查
 - 动画控制（随时间变化的变量）
 
 ```toml
-<b>[CommandListFrameStart]</b>
+[CommandListFrameStart]
 <em>; 每帧检查游戏状态</em>
 if $show_mod
     <em>; 保持 Mod 处于激活状态</em>
 endif
 ```
 
-# <b>完整 Mod INI 模板</b>
+# 完整 Mod INI 模板
 
-## <b>纹理替换模板</b>
+## 纹理替换模板
 
 ```toml
 <em>; ====================================</em>
@@ -915,10 +915,10 @@ endif
 <em>; 作者：YourName</em>
 <em>; ====================================</em>
 ; Constants -------------------------
-<b>[Constants]
-</b>global $active = 0 <b>          </b>;活动状态判断
+[Constants]
+global $active = 0 ;活动状态判断
 
-<b>[Present]</b>
+[Present]
 post $active = 0
 ; Overrides -------------------------
 [TextureOverrideAriaAriaHairBlend]
@@ -941,58 +941,11 @@ hash = 697c6c6a
 override_vertex_count = 5790
 override_byte_stride = 40
 
-[TextureOverrideAriaAriaHairIB]<b>
-</b>hash = 8a7ae9c2<b>
-</b>handling = skip<b>
-
-</b>[TextureOverrideAriaAriaHairA]<b>
-</b>hash = 8a7ae9c2<b>
-</b>match_first_index = 0<b>
-</b>run = CommandListSkinTexture<b>
-</b>ib = ResourceAriaAriaHairAIB<b>
-</b>ps-t3 = ResourceAriaAriaHairADiffuse<b>
-</b>ps-t5 = ResourceAriaAriaHairALightMap<b>
-</b>ps-t6 = ResourceAriaAriaHairAMaterialMap<b>
-</b>run = CommandList\ZZMI\SetTextures<b>
-</b>drawindexed = 8292, 0, 0<b>
-
-</b>[TextureOverrideAriaAriaHairB]<b>
-</b>hash = 8a7ae9c2<b>
-</b>match_first_index = 8292<b>
-</b>run = CommandListSkinTexture<b>
-</b>ib = ResourceAriaAriaHairBIB<b>
-</b>ps-t3 = ResourceAriaAriaHairADiffuse<b>
-</b>ps-t5 = ResourceAriaAriaHairALightMap<b>
-</b>ps-t6 = ResourceAriaAriaHairAMaterialMap<b>
-</b>run = CommandList\ZZMI\SetTextures<b>
-</b>drawindexed = 14913, 0, 0
+[TextureOverrideAriaAriaHairIB]hash = 8a7ae9c2handling = skip[TextureOverrideAriaAriaHairA]hash = 8a7ae9c2match_first_index = 0run = CommandListSkinTextureib = ResourceAriaAriaHairAIBps-t3 = ResourceAriaAriaHairADiffuseps-t5 = ResourceAriaAriaHairALightMapps-t6 = ResourceAriaAriaHairAMaterialMaprun = CommandList\ZZMI\SetTexturesdrawindexed = 8292, 0, 0[TextureOverrideAriaAriaHairB]hash = 8a7ae9c2match_first_index = 8292run = CommandListSkinTextureib = ResourceAriaAriaHairBIBps-t3 = ResourceAriaAriaHairADiffuseps-t5 = ResourceAriaAriaHairALightMapps-t6 = ResourceAriaAriaHairAMaterialMaprun = CommandList\ZZMI\SetTexturesdrawindexed = 14913, 0, 0
 
 <em>; Resources -------------------------</em>
 
-[ResourceAriaAriaHairPosition]<b>
-</b>type = Buffer<b>
-</b>stride = 40<b>
-</b>filename = AriaAriaHairPosition.buf<b>
-
-</b>[ResourceAriaAriaHairBlend]<b>
-</b>type = Buffer<b>
-</b>stride = 32<b>
-</b>filename = AriaAriaHairBlend.buf<b>
-
-</b>[ResourceAriaAriaHairTexcoord]<b>
-</b>type = Buffer<b>
-</b>stride = 20<b>
-</b>filename = AriaAriaHairTexcoord.buf<b>
-
-</b>[ResourceAriaAriaHairAIB]<b>
-</b>type = Buffer<b>
-</b>format = DXGI_FORMAT_R32_UINT<b>
-</b>filename = AriaAriaHairA.ib<b>
-
-</b>[ResourceAriaAriaHairBIB]<b>
-</b>type = Buffer<b>
-</b>format = DXGI_FORMAT_R32_UINT<b>
-</b>filename = AriaAriaHairB.ib
+[ResourceAriaAriaHairPosition]type = Bufferstride = 40filename = AriaAriaHairPosition.buf[ResourceAriaAriaHairBlend]type = Bufferstride = 32filename = AriaAriaHairBlend.buf[ResourceAriaAriaHairTexcoord]type = Bufferstride = 20filename = AriaAriaHairTexcoord.buf[ResourceAriaAriaHairAIB]type = Bufferformat = DXGI_FORMAT_R32_UINTfilename = AriaAriaHairA.ib[ResourceAriaAriaHairBIB]type = Bufferformat = DXGI_FORMAT_R32_UINTfilename = AriaAriaHairB.ib
 
 [ResourceAriaAriaHairADiffuse]
 filename = AriaAriaHairADiffuse.dds
@@ -1004,7 +957,7 @@ filename = AriaAriaHairALightMap.dds
 filename = AriaAriaHairAMaterialMap.dds
 ```
 
-## <b>带按键切换的模板</b>
+## 带按键切换的模板
 
 ```toml
 [Constants]
@@ -1108,10 +1061,10 @@ filename = Texture/e74620b5-75e05cdc-0-LightMap.dds
 filename = Texture/e74620b5-50a0faea-0-HighLightMap.dds
 ```
 
-## <b>框架分析模板</b>
+## 框架分析模板
 
 ```toml
-<b>[CommandListDumpAnalysis]</b>
+[CommandListDumpAnalysis]
 dump = dump_rt dump_tex dump_cb dump_vb dump_ib buf txt dds
 ```
 
@@ -1119,27 +1072,27 @@ dump = dump_rt dump_tex dump_cb dump_vb dump_ib buf txt dds
 
 <em>; 然后按 F8 执行转储。分析结果在 FrameAnalysis-* 文件夹中。</em>
 
-# <b>常见问题与排错</b>
+# 常见问题与排错
 
-## <b>问题 1：3DMigoto 注入失败</b>
+## 问题 1：3DMigoto 注入失败
 
-<b>**现象**</b>：游戏左下角无绿色文字，F1 无反应。
+**现象**：游戏左下角无绿色文字，F1 无反应。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 确认 `d3dx.ini` 中 `[Loader]` 的 `target = ZenlessZoneZero.exe` 已正确设置
 
-- <b>**以管理员身份**</b> 运行 `3DMigoto Loader.exe`
+- **以管理员身份** 运行 `3DMigoto Loader.exe`
 
 - 检查游戏版本更新后是否需要更新 ZZMI
 - 关闭杀毒软件或添加白名单
 - 确保 3DMigoto 不在游戏根目录下
 
-## <b>问题 2：贴图不生效（模型显示但无自定义贴图）</b>
+## 问题 2：贴图不生效（模型显示但无自定义贴图）
 
-<b>**现象**</b>：模型形状变了，但贴图还是游戏原版。
+**现象**：模型形状变了，但贴图还是游戏原版。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 1. 在 `[TextureOverride]` 中添加 `run = CommandListSkinTexture`
 2. 确认 `[CommandListSkin]` 中包含了所有必要的 `checktextureoverride` 条目
@@ -1147,23 +1100,15 @@ dump = dump_rt dump_tex dump_cb dump_vb dump_ib buf txt dds
 4. 检查贴图文件格式是否为 `.dds` 且置于正确路径
 
 ```toml
-[TextureOverrideNicoleSwim1Head]<b>
-</b>$active = 1<b>
-</b>hash = 5a4c1ef3<b>
-</b>match_first_index = 0<b>
-</b>run = CommandListSkinTexture<b>
-</b>checktextureoverride = ps-t3<b>
-</b>checktextureoverride = ps-t4<b>
-</b>checktextureoverride = ps-t5<b>
-</b>checktextureoverride = ps-t6
+[TextureOverrideNicoleSwim1Head]$active = 1hash = 5a4c1ef3match_first_index = 0run = CommandListSkinTexturechecktextureoverride = ps-t3checktextureoverride = ps-t4checktextureoverride = ps-t5checktextureoverride = ps-t6
 ib = Resource83243218cba6a3fbef57d306a2172372
 ```
 
-## <b>问题 3：模型部分残留（阴影/轮廓还在）</b>
+## 问题 3：模型部分残留（阴影/轮廓还在）
 
-<b>**现象**</b>：主要模型已被替换或移除，但阴影、轮廓或某些部件还在。
+**现象**：主要模型已被替换或移除，但阴影、轮廓或某些部件还在。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 进入狩猎模式，遍历所有 VS/PS，找到负责残留部分的着色器
 - 用 `[ShaderOverrideX]` 配合 `handling = skip` 跳过
@@ -1188,51 +1133,51 @@ if $active == 1
 endif
 ```
 
-## <b>问题 4：模型变形</b>
+## 问题 4：模型变形
 
-<b>**现象**</b>：模型显示但顶点扭曲/拉伸。
+**现象**：模型显示但顶点扭曲/拉伸。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 检查 `stride`（步长）值是否与原始一致。VB 的 stride 必须精确匹配
 - 重新导出模型数据，确认导出设置正确
 
-## <b>问题 5：Hash 不同导致 Mod 不工作</b>
+## 问题 5：Hash 不同导致 Mod 不工作
 
-<b>**现象**</b>：别人能用，我用不了。
+**现象**：别人能用，我用不了。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 确认显存大小（4GB 分界线）
 - 确认服务器版本（国服/国际服）
 - 确认游戏版本
 - 使用狩猎模式自行获取当前版本的 Hash
 
-## <b>问题 6：游戏更新后 Mod 失效</b>
+## 问题 6：游戏更新后 Mod 失效
 
-<b>**现象**</b>：游戏版本更新后 Mod 不工作。
+**现象**：游戏版本更新后 Mod 不工作。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 等待 Mod 作者更新，或自行重新获取 Hash
 - 查看 GameBanana 或踩蘑菇社区是否有 修复 工具
 - 在 `Mods/` 文件夹名称中添加 `DISABLED` 前缀临时禁用所有 Mod，逐步排查
 
-## <b>问题 7：按 F10 没有反应</b>
+## 问题 7：按 F10 没有反应
 
-<b>**现象**</b>：游戏中按 F10 不能刷新 Mod。
+**现象**：游戏中按 F10 不能刷新 Mod。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 先按 F6 再按 F10
 - 确认 F6 打开 Mod 时左下角有提示
 - 某些键盘需要配合 Fn 键
 
-## <b>问题 8：帧率下降</b>
+## 问题 8：帧率下降
 
-<b>**现象**</b>：使用 Mod 后游戏变卡。
+**现象**：使用 Mod 后游戏变卡。
 
-<b>**解决方案**</b>：
+**解决方案**：
 
 - 使用 ForPlaying 版本替代 ForDevelopment
 - 减少高分辨率贴图的使用
@@ -1240,9 +1185,9 @@ endif
 
 ---
 
-# <b>附录：快捷键速查表</b>
+# 附录：快捷键速查表
 
-## <b>通用快捷键</b>
+## 通用快捷键
 
 <table>
 <colgroup>
@@ -1260,7 +1205,7 @@ endif
 </tbody>
 </table>
 
-## <b>狩猎模式快捷键</b>
+## 狩猎模式快捷键
 
 <table>
 <colgroup>
@@ -1284,11 +1229,11 @@ endif
 </tbody>
 </table>
 
-&gt; <b>**注意**</b>：部分笔记本键盘没有独立小键盘，可能需要外接键盘或修改按键配置。
+&gt; **注意**：部分笔记本键盘没有独立小键盘，可能需要外接键盘或修改按键配置。
 
 ---
 
-# <b>参考链接</b>
+# 参考链接
 
 - [3DMigoto INI File Documentation （LeoTorrez）](https://leotorrez.github.io/modding/docs/) — 官方 INI 文档
 - [Zelbert 的 3DMigoto 笔记 （语雀）](https://www.yuque.com/zelbert/egu6ei/otf4uvvo3slg63g9) — 中文社区笔记
@@ -1301,5 +1246,5 @@ endif
 
 ---
 
-&gt; <b>**免责声明**</b>：使用 Mod 修改游戏客户端存在账号封禁风险，请自行评估风险。本指南仅用于技术学习与交流，请勿用于任何违规用途。
+&gt; **免责声明**：使用 Mod 修改游戏客户端存在账号封禁风险，请自行评估风险。本指南仅用于技术学习与交流，请勿用于任何违规用途。
 

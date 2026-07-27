@@ -22,7 +22,7 @@ sidebar_position: 3
 
 相关解决方案https://gamebanana.com/questions/105508
 
-### <b>实例：</b>
+### 实例：
 
 <img src="/assets/MaCLbAyeyoDWmix5IJRcnn05nUe.png" src-width="1280" src-height="720" align="center"/>
 

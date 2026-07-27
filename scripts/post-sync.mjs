@@ -20,7 +20,7 @@ let fixCount = 0
 // =============================================
 // 步骤 1: 修复 Markdown 中的反斜杠路径
 // =============================================
-console.log('🔧 [1/3] 修复反斜杠路径...')
+console.log('🔧 [1/3] 修复路径和清理 HTML 标签...')
 
 function walkMdFiles(dir) {
   if (!existsSync(dir)) return
@@ -39,15 +39,28 @@ function walkMdFiles(dir) {
 
 function processMdFile(filePath) {
   let content = readFileSync(filePath, 'utf-8')
+  let changed = false
 
   // 修复 []() 链接中的反斜杠
   let newContent = content.replace(
     /(\]\([^)]*?)\\([^)]*?\))/g,
     (match, prefix, suffix) => prefix + '/' + suffix
   )
-
   if (newContent !== content) {
-    writeFileSync(filePath, newContent, 'utf-8')
+    content = newContent
+    changed = true
+  }
+
+  // 清理飞书导出的 <b></b> 标签（普通段落中）
+  newContent = content.replace(/<b>\s*<\/b>/g, '')  // 空标签直接删
+  newContent = newContent.replace(/<\/?b>/g, '')     // 剩下的 b 标签也删掉
+  if (newContent !== content) {
+    content = newContent
+    changed = true
+  }
+
+  if (changed) {
+    writeFileSync(filePath, content, 'utf-8')
     fixCount++
   }
 }

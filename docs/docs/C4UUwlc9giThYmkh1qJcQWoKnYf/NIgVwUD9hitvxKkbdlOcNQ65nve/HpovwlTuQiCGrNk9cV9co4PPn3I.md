@@ -14,9 +14,9 @@ sidebar_position: 5
 
 <img src="/assets/HlzkbjSyVoDidbxZlcwc8C4enrc.png" src-width="514" src-height="60" align="center"/>
 
-所以比如一个巴特勒的mod<b>去除了原模型的眼睛</b>，那么其他共享hash的邦布就<b>都会丢失眼睛</b>。
+所以比如一个巴特勒的mod去除了原模型的眼睛，那么其他共享hash的邦布就都会丢失眼睛。
 
-解决办法就是修改mod的ini文件，让mod<b>仅在该邦布的身体出现在屏幕上时</b>才会去掉眼睛，具体方法如下。
+解决办法就是修改mod的ini文件，让mod仅在该邦布的身体出现在屏幕上时才会去掉眼睛，具体方法如下。
 
 ---
 
@@ -24,7 +24,7 @@ sidebar_position: 5
 
 打开mod文件夹内的ini文件
 
-<b>如果有多个ini文件，则打开眼睛部分的ini文件</b>（通常可以利用hash值来寻找）
+如果有多个ini文件，则打开眼睛部分的ini文件（通常可以利用hash值来寻找）
 
 在Constants部分（一般在文档开头）添加下面的代码：
 
@@ -49,13 +49,13 @@ post $active = 0
 
 ## 第二步、修改眼睛部分
 
-找到<b>去除邦布眼睛</b>的代码部分（可通过hash值搜索），将代码进行如下修改即可：
+找到去除邦布眼睛的代码部分（可通过hash值搜索），将代码进行如下修改即可：
 
 <img src="/assets/LRJkbKkvpobiQExITzQcRzIinQb.png" src-width="528" src-height="152" align="center"/>
 
-<b>注意</b><em>if语句和endif之间的代码行前的缩进</em>
+注意<em>if语句和endif之间的代码行前的缩进</em>
 
-<b>注意</b>：如果你要修复的mod不只是去除了原本的眼睛，而是<b>修改了眼睛</b>，那么需要将<b>所有眼睛部分的代码的hash下面的语句</b>都使用if条件包裹：
+注意：如果你要修复的mod不只是去除了原本的眼睛，而是修改了眼睛，那么需要将所有眼睛部分的代码的hash下面的语句都使用if条件包裹：
 
 <img src="/assets/PLvfbxZaqobGA5xnL5UcqoYSn5g.png" src-width="506" src-height="604" align="center"/>
 
@@ -77,13 +77,13 @@ draw=6088,0
 $active =1
 ```
 
-<b>如果有多个ini文件，而你打开的是眼睛部分的ini文件</b>，那么可以在文档末尾处添加如下代码：
+如果有多个ini文件，而你打开的是眼睛部分的ini文件，那么可以在文档末尾处添加如下代码：
 
 > [TextureOverrideBodyPosition]
-> hash=<b>到body的ini中的BodyPosition下寻找</b>
+> hash=到body的ini中的BodyPosition下寻找
 > $active=1
 
 <em>$active = 1之所以需要加在邦布身体部分的Position下面，是因为邦布眼睛是共享的，只有身体的hash才有唯一性。这样才能实现仅当该邦布身体出现在屏幕上时，才对眼睛进行修改。</em>
 
-<b>结束。</b>
+结束。
 

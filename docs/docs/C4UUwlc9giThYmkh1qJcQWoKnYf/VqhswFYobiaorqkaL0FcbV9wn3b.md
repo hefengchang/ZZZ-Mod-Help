@@ -11,21 +11,21 @@ sidebar_position: 3
 
 https://leotorrez.github.io/modding/
 
-## <b>MOD技术文档</b>
+## MOD技术文档
 
 [https://www.yuque.com/zelbert/egu6ei](https://www.yuque.com/zelbert/egu6ei)
 
-## <b>3dmigoto ini 文件解析</b>
+## 3dmigoto ini 文件解析
 
 https://xiaolinxiaozhu.github.io/2024/10/26/3dmigoto%20ini%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#ini%E6%96%87%E4%BB%B6
 
-## <b>绝区零mod资产库</b>
+## 绝区零mod资产库
 
 高显：[https://github.com/Satan1c/ZZ-Model-Importer-Assets/tree/main](https://github.com/Satan1c/ZZ-Model-Importer-Assets/tree/main)
 
 版本更新hash表：https://github.com/hefengchang
 
-## <b>NicoMico大佬教程（SSMT制作者）</b>
+## NicoMico大佬教程（SSMT制作者）
 
 B站教程：https://space.bilibili.com/3632314156320938
 
@@ -33,7 +33,7 @@ B站教程：https://space.bilibili.com/3632314156320938
 
 https://docs.qq.com/smartsheet/DS3lIb0NOYUtrZGxG?tab=BB08J2&_t=1748749513402&nlc=1&viewId=vbJgML&u=e3c15c690e8d422ba6e87ce5be3f0918
 
-## <b>虹汐哥的mod制作教程</b>
+## 虹汐哥的mod制作教程
 
 https://www.caimogu.cc/post/1327424.html
 

@@ -8,7 +8,7 @@ sidebar_position: 0
 
 # 角色头发贴图异常发光或错误
 
-### <b>1.</b><b>头发或身体有部分异常发光</b>
+### 1.头发或身体有部分异常发光
 
 这是专属武器造成的贴图错误，可以屏蔽专武特效。点击下图这个开关即可关闭。
 
@@ -19,7 +19,7 @@ sidebar_position: 0
 举例薇薇安，只需要在头发hash所在的节中的ib=的下一行添加ps-t9 = null（槽位可能会变化，多试几个数字） 即可。比如以下这样：
 
 ```text
-<b>[TextureOverridec4eb6168Head]</b>
+[TextureOverridec4eb6168Head]
 $active = 1
 hash = c4eb6168
 match_first_index = 0
@@ -31,7 +31,7 @@ ps-t9 = null
 举例仪玄，只需要在头发hash所在的节中的ib=的下一行添加ps-t11 = null （槽位可能会变化，多试几个数字）即可。比如以下这样：
 
 ```java
-<b>[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component1]</b>
+[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component1]
 hash = ac8e9ee3
 match_first_index = 0
 handling = skip
@@ -40,7 +40,7 @@ ib = Resource_ac8e9ee3_Component1
 ps-t13 = null
 run = CommandList_IB_yixuanxuan_ac8e9ee3_Component1
 
-<b>[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component2]</b>
+[TextureOverride_IB_yixuanxuan_ac8e9ee3_Component2]
 hash = ac8e9ee3
 match_first_index = 21816
 handling = skip
@@ -87,7 +87,7 @@ https://gamebanana.com/questions/90354
 
 https://gamebanana.com/questions/96522
 
-### <b>2.</b><b>头发在动态壁纸中贴图错乱。</b>
+### 2.头发在动态壁纸中贴图错乱。
 
 在动态壁纸中，部分角色有另外的hash值，你需要找到并添加它。
 

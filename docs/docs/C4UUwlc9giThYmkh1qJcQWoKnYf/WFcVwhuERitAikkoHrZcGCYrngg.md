@@ -7,9 +7,9 @@ sidebar_position: 4
 
 # mod制作相关软件
 
-<b>以下标题均为链接，点击即可直达软件官方网站。</b>
+以下标题均为链接，点击即可直达软件官方网站。
 
-## <b>XFLTD养鸡场</b>
+## XFLTD养鸡场
 
 https://www.xfltd.org/#/register?code=YqvU0kPy
 
@@ -39,7 +39,7 @@ Adobe Photoshop（简称Photoshop，常被称为PS）是由Adobe Systems开发�
 
 Visual Studio Code（简称 VSCode）是由微软开发的一款开源代码编辑器，它以其轻量级、功能强大和高度可定制性而受到广泛欢迎。用于py程序或者ini文件的阅读和修改。
 
-## <b>ZMTB工具箱</b>
+## ZMTB工具箱
 
 https://github.com/ZelbertYQ/ZMTB
 

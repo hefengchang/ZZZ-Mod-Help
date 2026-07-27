@@ -10,11 +10,11 @@ sidebar_position: 3
 
 # 前言
 
-目前香蕉网的绝区零修复工具只包含可玩角色的高低显hash值修复，所以并不能修复<b>角色武器、皮肤以及场景类mod</b>的贴图错误。
+目前香蕉网的绝区零修复工具只包含可玩角色的高低显hash值修复，所以并不能修复角色武器、皮肤以及场景类mod的贴图错误。
 
 如果想要修复角色以外这些mod的贴图错误，就需要手动dump获取你的贴图hash后进行修改。
 
-不过<b>武器类mod</b>目前使用槽位来替换贴图暂时并没发现什么问题，所以直接将hash改为槽位算是更加简单
+不过武器类mod目前使用槽位来替换贴图暂时并没发现什么问题，所以直接将hash改为槽位算是更加简单
 
 的改法，本文就讲解一下具体的修改方法。
 
@@ -22,7 +22,7 @@ sidebar_position: 3
 
 # 原理讲解
 
-<b>首先介绍一下替换贴图的两种方法，hash指定和槽位指定</b>：
+首先介绍一下替换贴图的两种方法，hash指定和槽位指定：
 
 1.槽位指定
 
@@ -65,9 +65,9 @@ this = ResourceTriggerWeaponBarrelAMaterialMap
 
 # 修改流程
 
-<b>下面我们用两个实例来演示实际修改流程：</b>
+下面我们用两个实例来演示实际修改流程：
 
-## 首先展示<b>XXMI</b>格式的mod
+## 首先展示XXMI格式的mod
 
 ### 第一步，打开mod的ini文件，搜索“this”：
 
@@ -91,7 +91,7 @@ this = ResourceTriggerWeaponBarrelAMaterialMap
 
 然后我们在此部分上方的"ib ="行下面添加对应的槽位代码：
 
-注意：t3对应<b>Diffuse</b>，t4对应<b>NormalMap</b>，剩下两个是光照和材质（或者叫高光），t5对应<b>LightMap</b>，t6对应<b>MaterialMap</b>，一般按照顺序内的先后顺序对应即可。
+注意：t3对应Diffuse，t4对应NormalMap，剩下两个是光照和材质（或者叫高光），t5对应LightMap，t6对应MaterialMap，一般按照顺序内的先后顺序对应即可。
 
 由于此mod没有法线贴图（NormalMap），所以ps-t4位置留空即可。
 
@@ -157,7 +157,7 @@ ps-t6 = ResourceTriggerWeaponBarrelAMaterialMap
 
 ---
 
-## 然后我们来修改一个<b>SSMT(DBMT)</b>格式的mod
+## 然后我们来修改一个SSMT(DBMT)格式的mod
 
 由于SSMT格式的特殊性，贴图配置可能在另外单独的ini文件内，我们为了便于理解和实操，这里使用一个具体的mod做修改演示，以[【武器mod】扳机-谢幕曲](https://www.caimogu.cc/post/1980528.html)为例：
 
@@ -201,7 +201,7 @@ match_priority = 0
 this = Resource_36f39b49
 ```
 
-我们只需要将这些里面关于武器的4张贴图的Resource部分<b>依次</b>复制到另一个"trigger_weapon.ini"内即可：
+我们只需要将这些里面关于武器的4张贴图的Resource部分依次复制到另一个"trigger_weapon.ini"内即可：
 
 ```java
 [Resource_19515c67]
@@ -341,7 +341,7 @@ run = CommandList_IB_trigger_weapon_弹夹_Component1
 
 <img src="/assets/Bu1NbsLTEoQsE0x74v1cr7vwnmg.png" src-width="596" src-height="410" align="center"/>
 
-这是由于原来的ini不在同一个文件夹引起的，因为weapon.ini实际在Texture文件夹内，所以我们将其中的Resource复制到trigger_weapon.ini内后，还要在filename后面<b>添加一下相对路径“Texture\”</b>：
+这是由于原来的ini不在同一个文件夹引起的，因为weapon.ini实际在Texture文件夹内，所以我们将其中的Resource复制到trigger_weapon.ini内后，还要在filename后面添加一下相对路径“Texture\”：
 
 <img src="/assets/W5J4bWG4GoTpk8x1R2UcdRa5n4c.png" src-width="594" src-height="284" align="center"/>
 
