@@ -97,7 +97,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.png',
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/hefengchang?tab=repositories' }],
     nav: [
       { text: '🏠 首页 / Home', link: '/' },
       { text: '📚 文档 / Docs', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
