@@ -126,10 +126,6 @@ export default defineConfig({
   ignoreDeadLinks: true,
 
     locales: {
-    '/': {
-      lang: 'zh-CN',
-      label: '中文',
-    },
     '/en/': {
       lang: 'en',
       label: 'English',
@@ -138,6 +134,7 @@ export default defineConfig({
           { text: 'Home', link: '/en/' },
           { text: 'Docs', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
           { text: 'FAQ', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy' },
+          { text: '中文', link: '/' },
         ],
         sidebar: sidebarEn,
         editLink: {
@@ -175,6 +172,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '帮助文档', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf' },
       { text: '常见问题', link: '/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy' },
+          { text: 'English', link: '/en/' },
     ],
     sidebar: sidebarZh,
     editLink: {
