@@ -10,7 +10,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
     link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/QsehwWEv9iJ3BtkwIv7c4JUkngf"
   },
   {
-    text: "📄 3DMigoto / ZZMI INI 文档指南",
+    text: "⚙️ 3DMigoto / ZZMI INI 文档指南",
     link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/TVTjwU7NFi5OuckfwNtckgPqn1f"
   },
   {
@@ -112,7 +112,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/DQORwGBY6isTBFkUsqwcif6hnvg"
           },
           {
-            text: "📄 脸部碎坏",
+            text: "👤 脸部碎坏或冲突",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/W6qKwNqDziVl8BkjAAdcZ3jlnyg"
           }
         ]
@@ -146,7 +146,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/CCDZwL1p5iVyRHkgmdAclUX0n1e/EHz8wk8mHiogYKkCGikcaDgvnUg"
           },
           {
-            text: "📄 某些部位的颜色与周围明显不同",
+            text: "🎨 某些部位的颜色与周围明显不同",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/CCDZwL1p5iVyRHkgmdAclUX0n1e/GHxXwP9zYiLbAbk5S2yc2AtMnMG"
           }
         ]

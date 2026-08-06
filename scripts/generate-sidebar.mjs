@@ -62,8 +62,97 @@ const ICON_MAP = {
   'd3dx_user.ini': '📝',
 }
 
+// 关键词规则：新文档根据标题关键词自动匹配图标
+// 规则按优先级排列，先匹配先生效
+const KEYWORD_RULES = [
+  // 角色与身体部位
+  { keywords: ['头发', '发丝', '发型', 'hair'], icon: '💇' },
+  { keywords: ['眼睛', '瞳孔', '眼珠', 'eye'], icon: '👀' },
+  { keywords: ['脸部', '脸', '面部', 'face'], icon: '👤' },
+  { keywords: ['嘴巴', '嘴唇', 'mouth'], icon: '👄' },
+  { keywords: ['手部', '手掌', '手指', 'hand'], icon: '✋' },
+  { keywords: ['腿部', '腿', 'leg'], icon: '🦵' },
+  { keywords: ['身体', '身材', 'body'], icon: '🧍' },
+  { keywords: ['服装', '衣服', '皮肤', '服装', 'outfit', 'costume', 'skin'], icon: '👗' },
+  { keywords: ['帽子', '头饰', 'hat'], icon: '🎩' },
+  { keywords: ['眼镜', '墨镜', 'glasses'], icon: '👓' },
+  { keywords: ['面具', '面罩', 'mask'], icon: '🎭' },
+  { keywords: ['邦布', '机甲', '机器人', 'robot', 'mech'], icon: '🤖' },
+  { keywords: ['npc', '怪物', '敌人', 'enemy'], icon: '👾' },
+
+  // 游戏表现与画面
+  { keywords: ['贴图', '纹理', '材质', 'texture'], icon: '🖼️' },
+  { keywords: ['模型', 'mesh', '建模'], icon: '🧊' },
+  { keywords: ['发光', '光效', 'glow', 'emission', '灯效'], icon: '✨' },
+  { keywords: ['阴影', '影子', 'shadow'], icon: '🌑' },
+  { keywords: ['变暗', '变黑', '黑色', 'dark', 'black'], icon: '🌚' },
+  { keywords: ['透明', '半透明', 'transparent'], icon: '🔮' },
+  { keywords: ['玻璃', 'glasses', 'glass'], icon: '🪟' },
+  { keywords: ['颜色', '色差', '变色', 'color'], icon: '🎨' },
+  { keywords: ['特效', '效果', 'effect'], icon: '🪄' },
+  { keywords: ['画面', '显示', '屏幕', '屏', 'display', 'screen'], icon: '🖥️' },
+  { keywords: ['镜头', '视角', '视角', 'camera', 'view'], icon: '📷' },
+  { keywords: ['截图', 'screenshot'], icon: '📸' },
+
+  // 问题类型
+  { keywords: ['崩溃', '闪退', 'crash'], icon: '💥' },
+  { keywords: ['卡顿', '掉帧', 'lag', 'fps', '帧率'], icon: '🐢' },
+  { keywords: ['丢失', '消失', '不见', 'missing'], icon: '🗑️' },
+  { keywords: ['异常', '错误', '报错', '红字', 'error'], icon: '⚠️' },
+  { keywords: ['失效', '不生效', '无效', 'broken'], icon: '🚫' },
+  { keywords: ['冲突', 'conflict'], icon: '⚡' },
+  { keywords: ['闪屏', '花屏', '黑屏', '白屏'], icon: '🖥️' },
+  { keywords: ['延迟', 'ping', '网络'], icon: '📶' },
+
+  // 武器与装备
+  { keywords: ['武器', '专武', 'weapon'], icon: '⚔️' },
+  { keywords: ['装备', 'equipment'], icon: '🛡️' },
+  { keywords: ['道具', '物品', 'item'], icon: '🎒' },
+
+  // Mod 相关功能
+  { keywords: ['槽位', 'slot', '高低显', 'lod', 'lod'], icon: '📊' },
+  { keywords: ['ini', '配置', 'config', '参数'], icon: '⚙️' },
+  { keywords: ['按键', '快捷键', '热键', 'hotkey', 'key'], icon: '⌨️' },
+  { keywords: ['切换', 'switch', 'toggle'], icon: '🔀' },
+  { keywords: ['隐藏', 'hide'], icon: '👻' },
+  { keywords: ['更新', '升级', 'update'], icon: '🔄' },
+  { keywords: ['下载', 'download'], icon: '📥' },
+  { keywords: ['安装', 'install'], icon: '📖' },
+  { keywords: ['启动', '加载', '载入', 'load', 'start'], icon: '🚀' },
+  { keywords: ['steam', '蒸汽'], icon: '🎮' },
+  { keywords: ['存档', 'save', '备份', 'backup'], icon: '💾' },
+  { keywords: ['插件', 'plugin', '扩展'], icon: '🧩' },
+  { keywords: ['驱动', 'driver'], icon: '🔌' },
+  { keywords: ['汉化', '翻译', '中文', 'translate'], icon: '🌏' },
+
+  // 资源与教程分类
+  { keywords: ['教程', 'tutorial', '教学'], icon: '📘' },
+  { keywords: ['软件', '工具', 'tool'], icon: '🛠️' },
+  { keywords: ['网站', '获取', '下载地址', 'site', '网址'], icon: '🔗' },
+  { keywords: ['d3dx', '3dmigoto', '注解', '解析'], icon: '📄' },
+  { keywords: ['文件', '目录', '文件夹', 'file', 'folder'], icon: '📁' },
+  { keywords: ['问题', '常见问题', 'faq', '排查'], icon: '❓' },
+  { keywords: ['攻略', '心得', '经验', 'guide'], icon: '💡' },
+  { keywords: ['制作', '修改', '改造', 'create', 'modify'], icon: '🛠️' },
+  { keywords: ['rabbitfx'], icon: '✨' },
+  { keywords: ['xxmi', 'zzmi'], icon: '🚀' },
+]
+
 function getIcon(title) {
-  return ICON_MAP[title.trim()] || '📄'
+  const trimmed = title.trim()
+  // 先查精确匹配
+  if (ICON_MAP[trimmed]) return ICON_MAP[trimmed]
+
+  // 再按关键词匹配
+  const lower = trimmed.toLowerCase()
+  for (const rule of KEYWORD_RULES) {
+    if (rule.keywords.some(kw => lower.includes(kw.toLowerCase()))) {
+      return rule.icon
+    }
+  }
+
+  // 默认图标
+  return '📄'
 }
 
 function slugToLink(slug) {
