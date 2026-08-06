@@ -110,6 +110,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "👁️ 叶瞬光在某个视角会导致异常",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/DQORwGBY6isTBFkUsqwcif6hnvg"
+          },
+          {
+            text: "📄 脸部碎坏",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/W6qKwNqDziVl8BkjAAdcZ3jlnyg"
           }
         ]
       },
@@ -140,6 +144,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "❌ RabbitFX6.0版本之后，发光失效",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/CCDZwL1p5iVyRHkgmdAclUX0n1e/EHz8wk8mHiogYKkCGikcaDgvnUg"
+          },
+          {
+            text: "📄 某些部位的颜色与周围明显不同",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/CCDZwL1p5iVyRHkgmdAclUX0n1e/GHxXwP9zYiLbAbk5S2yc2AtMnMG"
           }
         ]
       },
@@ -170,6 +178,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "🔀 Mod切换按键不在前台仍然切换",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/AbbZwebuBiwVyVkH9AbcFCo7nBe/Uw1iwndleiL4l6k6VWDc3AnGnAc"
+          },
+          {
+            text: "📄 如何禁用与启用mod",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/AbbZwebuBiwVyVkH9AbcFCo7nBe/OzfPwA6nbiRSg2k4jD4cmRiCnLb"
           }
         ]
       },
@@ -206,6 +218,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "⌨️ 快捷键命令说明",
         link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/M9ytwWsXziywL3kpaoGc9JkKnlg"
+      },
+      {
+        text: "📄 ",
+        link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/Qx6TwoZLKi2cbgkXCExcrkaonwh"
       }
     ]
   },

@@ -14,7 +14,7 @@ sidebar_position: 0
 
 <img src="/assets/Gx6yb54UPokXCWxkwmacsF4Gn3g.png" src-width="1056" src-height="1030" align="center"/>
 
-另一种方法，需要在头发所在节添加ps-t__ = null , __ 代表的数字每个角色都不一样，你可以从7开始往上加，每加一次刷新看效果。
+另一种方法，需要在头发所在节添加ps-t__ = null , __ 代表的数字每个角色都不一样，你可以从7开始往上加，每加一次刷新看效果。有的角色的发光纹理槽位不止一个，可能需要添加多个ps-来禁用。
 
 举例薇薇安，只需要在头发hash所在的节中的ib=的下一行添加ps-t9 = null（槽位可能会变化，多试几个数字） 即可。比如以下这样：
 
@@ -82,8 +82,6 @@ endif
 https://gamebanana.com/questions/89311
 
 https://gamebanana.com/questions/94279
-
-https://gamebanana.com/questions/90354
 
 https://gamebanana.com/questions/96522
 

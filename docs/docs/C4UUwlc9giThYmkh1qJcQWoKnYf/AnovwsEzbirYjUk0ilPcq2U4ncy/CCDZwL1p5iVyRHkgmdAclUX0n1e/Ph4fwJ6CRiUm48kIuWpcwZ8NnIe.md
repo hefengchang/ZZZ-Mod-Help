@@ -16,7 +16,7 @@ sidebar_position: 3
 
 <img src="/assets/PcWNbq22qoT0z6xP5FnciAhLnye.png" src-width="1056" src-height="1030" align="center"/>
 
-另一种方法，需要在发光部位的对应ib下添加发光纹理槽位为失效，比如ps-t9 = null。但并不是所有的角色都是ps-t9，可以从ps-t7开始尝试，如果不行就将7改为8，还不行就改为9，依次轮推。每次改完记得保存和游戏里F10刷新看效果。
+另一种方法，需要在发光部位的对应ib下添加发光纹理槽位为失效，比如ps-t9 = null。但并不是所有的角色都是ps-t9，可以从ps-t7开始尝试，如果不行就将7改为8，还不行就改为9，依次轮推。每次改完记得保存和游戏里F10刷新看效果。有的角色的发光纹理槽位不止一个，可能需要添加多个ps-来禁用。
 
 代码举例：
 
@@ -67,8 +67,6 @@ endif
 已知bug：[点击跳转](/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\Yv45wzUfTijAwMkldP0c7lmFnLe)
 
 相关问题参考：
-
-https://gamebanana.com/questions/89899
 
 https://gamebanana.com/questions/89311
 
