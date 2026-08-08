@@ -2,7 +2,7 @@
 title: 某些部位的颜色与周围明显不同
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e\GHxXwP9zYiLbAbk5S2yc2AtMnMG
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 

@@ -2,7 +2,7 @@
 title: 脸部纹理或武器纹理异常
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\EjoEwOHvpivSzTkBhpXc2qs1nUz
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 
@@ -28,13 +28,13 @@ https://github.com/hefengchang/ZZZ-Model-Hash/tree/master/%E8%A7%92%E8%89%B2hash
 
 ```haskell
 [TextureOverride2d7f2223Head]
-hash = 2d7f2223   #武器hash
+hash = 2d7f2223   ;武器hash
 match_first_index = 0
 checktextureoverride = ps-t3 
 checktextureoverride = ps-t4 
 checktextureoverride = ps-t5 
 checktextureoverride = ps-t6 
-ib = Resource2d7f2223Head   #在ib的下面添加槽位
+ib = Resource2d7f2223Head   ;在ib的下面添加槽位
 ps-t3 = Resource_2d7f2223-564b4022-1-DiffuseMap
 ps-t4 = Resource_2d7f2223-fe9958c0-1-NormalMap
 ps-t5 = Resource_2d7f2223-a72dfbea-1-LightMap

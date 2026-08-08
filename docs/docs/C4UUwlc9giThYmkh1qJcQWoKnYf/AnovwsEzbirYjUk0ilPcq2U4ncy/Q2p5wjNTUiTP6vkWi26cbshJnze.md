@@ -19,7 +19,8 @@ sidebar_position: 1
 9. 检查ShaderCache和ShaderFixes文件夹里是否有异常文件，可以直接移除里面的所有内容
 10. 移除Mods文件夹里的所有mod，单独使用问题mod，检查是否正常。如果正常则说明是其他mod导致的冲突问题
 11. 请勿使用代理查看器这个mod，https://gamebanana.com/mods/600543
-12. 使用的ZZMI过于老旧，或者没有使用XXMI自带的ZZMI文件夹\XXMI\ZZMI，而是在设置中指定了其他路径的ZZMI文件夹。你需要删除（保险起见可以先做个备份）ZZMI文件夹内除了Mods文件夹以外的所有内容，然后使用修复ZZMI。相关案例https://gamebanana.com/questions/106962
+12. 请勿使用老旧版本的3dmigoto和ZZMI，你需要重新创建一个干净的XXMI运行环境。使用管理器的可以搭配XXMI来运行，具体方法见https://www.caimogu.cc/post/2107515.html
+13. 使用的ZZMI过于老旧，或者没有使用XXMI自带的ZZMI文件夹\XXMI\ZZMI，而是在设置中指定了其他路径的ZZMI文件夹。你需要删除（保险起见可以先做个备份）ZZMI文件夹内除了Mods文件夹以外的所有内容，然后使用修复ZZMI。相关案例https://gamebanana.com/questions/106962
 
 <img src="/assets/FgAGbltJuoRhF8xSygrc1vfPnHc.png" src-width="1214" src-height="574" align="center"/>
 

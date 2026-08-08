@@ -2,15 +2,15 @@
 title: 高低显与槽位替换
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\NLPEwE2udiORazkwflpc1qWXnlb
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 
 # 高低显与槽位替换
 
-高显：独立显卡显存在4GB以上，即为2048p(2K贴图)高显hash
+高显：独立显卡显存在6GB以上，即为2048p(2K贴图)高显hash
 
-低显：独立显卡显存在4GB以下，即为1024p(1K贴图)低显hash
+低显：独立显卡显存在6GB以下，即为1024p(1K贴图)低显hash
 
 部分mod没有添加低显支持，导致低显用户无法正常显示，需要手动添加相关低显或使用修复工具，或者改为槽位替换的方法。
 
@@ -32,7 +32,7 @@ drawindexed = auto
 hash = 5a839fb2
 match_first_index = 0
 run = CommandListSkinTexture
-ib = ResourceCorinHairAIB  #在ib下添加槽位
+ib = ResourceCorinHairAIB  ;在ib下添加槽位
 ps-t3 = ResourceCorinHairADiffuse
 ps-t4 = ResourceCorinHairANormalMap
 ps-t5 = ResourceCorinHairALightMap

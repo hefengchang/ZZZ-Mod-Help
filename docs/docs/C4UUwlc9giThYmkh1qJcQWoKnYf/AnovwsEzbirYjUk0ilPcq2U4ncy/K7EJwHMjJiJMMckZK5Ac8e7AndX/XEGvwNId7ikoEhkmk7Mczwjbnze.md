@@ -2,7 +2,7 @@
 title: 角色没有装mod，但贴图错误
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\XEGvwNId7ikoEhkmk7Mczwjbnze
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 

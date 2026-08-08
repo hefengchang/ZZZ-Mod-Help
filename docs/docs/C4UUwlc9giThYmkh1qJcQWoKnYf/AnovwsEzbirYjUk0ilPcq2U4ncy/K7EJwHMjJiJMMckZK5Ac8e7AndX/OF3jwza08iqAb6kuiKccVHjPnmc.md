@@ -2,7 +2,7 @@
 title: 录像店的所有录像带消失
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\OF3jwza08iqAb6kuiKccVHjPnmc
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 

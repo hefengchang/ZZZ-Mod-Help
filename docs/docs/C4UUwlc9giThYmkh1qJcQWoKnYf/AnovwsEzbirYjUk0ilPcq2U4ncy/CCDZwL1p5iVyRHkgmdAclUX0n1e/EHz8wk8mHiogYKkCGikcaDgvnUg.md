@@ -2,7 +2,7 @@
 title: RabbitFX6.0版本之后，发光失效
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e\EHz8wk8mHiogYKkCGikcaDgvnUg
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 

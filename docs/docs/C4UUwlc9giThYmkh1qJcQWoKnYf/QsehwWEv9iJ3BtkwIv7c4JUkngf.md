@@ -141,6 +141,8 @@ F5           仅切换 3DMigoto 覆盖层（可显示 Mod 信息）
 
 如果你需要更精细的 Mod 管理（分类、开关、配置），推荐搭配 d3dxSkinManage 使用：
 
+很遗憾，该管理器已停止更新。以下内容仅做原理参考。其他管理器的相关教程https://www.caimogu.cc/post/2124141.html
+
 1. 下载并安装 d3dxSkinManage：https://d3dxskinmanage.numlinka.com/
 2. 在 XXMI 的设置中，将ZZMI文件夹的路径为管理器的mod工作目录，例如：mod管理器\home\Zenless Zone Zero\work
 

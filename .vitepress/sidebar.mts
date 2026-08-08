@@ -68,8 +68,12 @@ const sidebar: DefaultTheme.SidebarItem[] = [
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX"
           },
           {
-            text: "💇 角色头发贴图异常发光或错误",
+            text: "💇 头发身体等部位异常发光",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/StCLwEIPviv3Drk6N4Mc2gjFnRb"
+          },
+          {
+            text: "💇 头发等部位在动态壁纸中贴图错乱",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/GQf4wfrn7iGMI0kX5X1cpTjrnpc"
           },
           {
             text: "🖼️ 角色没有装mod，但贴图错误",
@@ -136,10 +140,6 @@ const sidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "☀️ 发光太亮或太暗",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/CCDZwL1p5iVyRHkgmdAclUX0n1e/K4cPwfG3sitbbSksS4rcr7FCnwb"
-          },
-          {
-            text: "✨ 某些部位异常发光",
-            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/CCDZwL1p5iVyRHkgmdAclUX0n1e/Ph4fwJ6CRiUm48kIuWpcwZ8NnIe"
           },
           {
             text: "❌ RabbitFX6.0版本之后，发光失效",
@@ -218,10 +218,6 @@ const sidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "⌨️ 快捷键命令说明",
         link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/M9ytwWsXziywL3kpaoGc9JkKnlg"
-      },
-      {
-        text: "📄 ",
-        link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/Qx6TwoZLKi2cbgkXCExcrkaonwh"
       }
     ]
   },

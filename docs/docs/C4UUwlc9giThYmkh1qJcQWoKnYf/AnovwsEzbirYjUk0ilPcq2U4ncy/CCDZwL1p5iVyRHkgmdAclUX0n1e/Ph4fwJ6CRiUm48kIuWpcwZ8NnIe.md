@@ -8,7 +8,7 @@ sidebar_position: 3
 
 # 某些部位异常发光
 
-与[角色头发贴图异常发光或错误](/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\StCLwEIPviv3Drk6N4Mc2gjFnRb)相同。
+与[角色头发贴图异常发光或错误](/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX\StCLwEIPviv3Drk6N4Mc2gjFnRb)相同。
 
 在不该发光的地方有异常的发光，比如头发上的发光斑点，腿部的发光。
 
@@ -64,7 +64,7 @@ if $costume_mods
 endif
 ```
 
-已知bug：[点击跳转](/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\Yv45wzUfTijAwMkldP0c7lmFnLe)
+已知bug：[点击跳转](/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/Yv45wzUfTijAwMkldP0c7lmFnLe)
 
 相关问题参考：
 
