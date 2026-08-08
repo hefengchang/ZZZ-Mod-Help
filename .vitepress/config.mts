@@ -18,7 +18,6 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/logo.png',
     socialLinks: [{ icon: 'github', link: 'https://github.com/hefengchang?tab=repositories' }],
     nav: [
       { text: '🏠 首页 / Home', link: '/' },
@@ -47,7 +46,7 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/ZZZ-Mod-Help/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#e84c22' }],
     ['meta', { name: 'application-name', content: '绝区零Mod帮助文档' }],
     ['meta', { property: 'og:title', content: '绝区零 Mod 帮助文档' }],
