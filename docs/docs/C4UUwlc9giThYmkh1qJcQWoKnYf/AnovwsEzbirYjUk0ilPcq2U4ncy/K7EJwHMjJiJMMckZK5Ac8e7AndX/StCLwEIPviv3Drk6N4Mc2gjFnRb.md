@@ -12,17 +12,17 @@ sidebar_position: 0
 
 <img src="/assets/AFhtb3pM6o5zYzxUYnQcalTVnfb.png" src-width="1136" src-height="724" align="center"/>
 
-原因：
+# 原因
 
 这是Mod中贴图合并导致的专武光效贴图位置异常。
 
-方法一：
+# 解决方法一
 
 在角色装备页面屏蔽专武特效。
 
 <img src="/assets/Gx6yb54UPokXCWxkwmacsF4Gn3g.png" src-width="1056" src-height="1030" align="center"/>
 
-方法二：
+# 解决方法二
 
 修改ini配置文件。
 
@@ -59,7 +59,7 @@ endif
 
 ---
 
-实例一
+# 实例一
 
 这是仪玄的一个mod，未修复前
 
@@ -113,7 +113,7 @@ run = CommandList_IB_yixuanxuan_ac8e9ee3_Component2
 
 <img src="/assets/DSJ8bpNUKodudBxkADfc9ufVnBe.png" src-width="202" src-height="130" align="center"/>
 
-实例二
+# 实例二
 
 这是薇薇安的一个mod，未修复前
 
@@ -250,7 +250,7 @@ ps-t6 = Resource_cd609d98-fa650e6c-1-HighLightMap
 
 <img src="/assets/DthtbmBy9oLCktxEzKec6xqpnHd.png" src-width="332" src-height="428" align="center"/>
 
-特殊实例三
+# 特殊实例三
 
 这是席德的一个mod，未修复前
 
