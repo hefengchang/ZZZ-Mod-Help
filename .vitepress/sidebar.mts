@@ -112,7 +112,7 @@ const sidebar: DefaultTheme.SidebarItem[] = [
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/UmggwTIMTisDnTkWTcLcMcTwnuf"
           },
           {
-            text: "👁️ 叶瞬光在某个视角会导致异常",
+            text: "📷 叶瞬光等角色在某个视角会导致异常",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/DQORwGBY6isTBFkUsqwcif6hnvg"
           },
           {
@@ -182,6 +182,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "📄 如何禁用与启用mod",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/AbbZwebuBiwVyVkH9AbcFCo7nBe/OzfPwA6nbiRSg2k4jD4cmRiCnLb"
+          },
+          {
+            text: "✨ 全身轮廓异常发光",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/AbbZwebuBiwVyVkH9AbcFCo7nBe/GRElwwKoBiu2sPkYyv1cQRKinPf"
           }
         ]
       },

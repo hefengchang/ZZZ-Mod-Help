@@ -323,11 +323,11 @@
               },
               {
                 "depth": 3,
-                "title": "叶瞬光在某个视角会导致异常",
+                "title": "叶瞬光等角色在某个视角会导致异常",
                 "node_token": "DQORwGBY6isTBFkUsqwcif6hnvg",
                 "parent_node_token": "K7EJwHMjJiJMMckZK5Ac8e7AndX",
                 "obj_create_time": "1784825525",
-                "obj_edit_time": "1784826212",
+                "obj_edit_time": "1786617653",
                 "obj_token": "DSwIdnx56oZGQ2xBqKuc4mn4nuh",
                 "children": [],
                 "has_child": false,
@@ -532,6 +532,20 @@
                 "slug": "C4UUwlc9giThYmkh1qJcQWoKnYf\\AnovwsEzbirYjUk0ilPcq2U4ncy\\AbbZwebuBiwVyVkH9AbcFCo7nBe\\OzfPwA6nbiRSg2k4jD4cmRiCnLb",
                 "position": 4,
                 "filename": "C4UUwlc9giThYmkh1qJcQWoKnYf\\AnovwsEzbirYjUk0ilPcq2U4ncy\\AbbZwebuBiwVyVkH9AbcFCo7nBe\\OzfPwA6nbiRSg2k4jD4cmRiCnLb.md"
+              },
+              {
+                "depth": 3,
+                "title": "全身轮廓异常发光",
+                "node_token": "GRElwwKoBiu2sPkYyv1cQRKinPf",
+                "parent_node_token": "AbbZwebuBiwVyVkH9AbcFCo7nBe",
+                "obj_create_time": "1786603411",
+                "obj_edit_time": "1786604273",
+                "obj_token": "WRgPdWXIXo0vKDxwusUcR76UnCg",
+                "children": [],
+                "has_child": false,
+                "slug": "C4UUwlc9giThYmkh1qJcQWoKnYf\\AnovwsEzbirYjUk0ilPcq2U4ncy\\AbbZwebuBiwVyVkH9AbcFCo7nBe\\GRElwwKoBiu2sPkYyv1cQRKinPf",
+                "position": 5,
+                "filename": "C4UUwlc9giThYmkh1qJcQWoKnYf\\AnovwsEzbirYjUk0ilPcq2U4ncy\\AbbZwebuBiwVyVkH9AbcFCo7nBe\\GRElwwKoBiu2sPkYyv1cQRKinPf.md"
               }
             ],
             "has_child": true,
@@ -616,7 +630,7 @@
             "node_token": "UF4lwZOktirrmbkEpubcKKSInQh",
             "parent_node_token": "AnovwsEzbirYjUk0ilPcq2U4ncy",
             "obj_create_time": "1751840840",
-            "obj_edit_time": "1784354711",
+            "obj_edit_time": "1786617776",
             "obj_token": "DLDid93VroYcMbxki5qclUnnnoe",
             "children": [],
             "has_child": false,

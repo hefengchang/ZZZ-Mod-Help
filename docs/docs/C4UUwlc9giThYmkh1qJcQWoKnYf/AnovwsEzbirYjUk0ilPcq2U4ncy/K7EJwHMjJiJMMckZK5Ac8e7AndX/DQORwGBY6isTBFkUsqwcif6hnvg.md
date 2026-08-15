@@ -1,14 +1,16 @@
 ---
-title: 叶瞬光在某个视角会导致异常
+title: 叶瞬光等角色在某个视角会导致异常
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\DQORwGBY6isTBFkUsqwcif6hnvg
 sidebar_position: 11
 ---
 
 
-# 叶瞬光在某个视角会导致异常
+# 叶瞬光等角色在某个视角会导致异常
 
-在某个视角下整个场景界面变为绿色或者卡顿等异常，原因是ini文件中胸前的透明布料代码错误，比如
+角色在某个视角下整个场景界面变为绿色、卡顿、黑屏等异常，原因是ini文件中透明布料屏蔽时用了handling = skip但没有添加ib = null导致，比如
+
+叶瞬光的胸前透明布料`hash = 3b1b73fe`
 
 ```haskell
 [TextureOverrideYeShunguangDressFlapBlend]

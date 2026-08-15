@@ -21,47 +21,77 @@ sidebar_position: 10
 
 <img src="/assets/CnD9bgcSWoJxEyxIYUQcgDg7nff.png" src-width="691" src-height="699" align="center"/>
 
-1. 伊芙琳卡顿问题，如果是靠近角色卡顿，查看是否有以下代码，添加ib = null即可。
+1. 移除透明布料等问题导致的卡顿，需要在添加handling = skip的同时添加ib = null来解决。
+
+举例1：
+
+伊芙琳卡顿问题
 
 ```haskell
 [TextureOverride_IB_04b53ecd_Body]
 hash = 04b53ecd
-match_first_index = 50418   找到有50418的这个节
+match_first_index = 50418   ;找到有50418的这个节,透明布料屏蔽导致的卡顿
 run = CommandListSkinTexture
-;handling = skip
+handling = skip
 ib = null
 ```
 
-1. 叶瞬光卡顿问题，如果是靠近角色或人物界面卡顿，与伊芙琳类似，添加ib = null即可。
+举例2：
+
+叶瞬光卡顿问题
 
 ```haskell
-hash = 3b1b73fe
-;handling = skip
+hash = 3b1b73fe  ;透明布料屏蔽导致的卡顿
+handling = skip
 ib = null
 ```
 
 相关解决方案https://gamebanana.com/questions/96819
 
-1. 仪玄卡顿问题，靠近角色或人物界面卡顿，与上述类似，添加ib = null。
+举例3：
+
+仪玄卡顿问题
 
 ```text
 [TextureOverrideYiXuanCordeIB]
-hash = 67c61080
-;handling = skip
+hash = 67c61080  ;铜钱绳屏蔽导致的卡顿
+handling = skip
 ib = null
 
 [TextureOverrideYiXuanAccessIB]
-hash = 1630f2d0
-;handling = skip
+hash = 1630f2d0  ;葫芦屏蔽导致的卡顿
+handling = skip
 ib = null
 
 [TextureOverrideYiXuanAccess1IB]
-hash = 0fdae851
-;handling = skip
+hash = 0fdae851  ;葫芦墨水屏蔽导致的卡顿
+handling = skip
 ib = null
 ```
 
 相关解决方案https://gamebanana.com/questions/98558
+
+举例4：
+
+希格莉德皮肤卡顿问题
+
+```text
+[TextureOverridesigsIB]
+hash = d9e49957  ;身体部位的透明布料导致的卡顿，原皮的hash是a23aa8a3
+handling = skip
+ib = null
+
+[TextureOverridesigsA]
+hash = d9e49957
+match_first_index = 0
+run = CommandListSkinTexture
+ib = ResourcesigsAIB
+Resource\ZZMI\Diffuse = ref ResourcesigsADiffuse
+Resource\ZZMI\NormalMap = ref ResourcesigsANormalMap
+run = CommandList\ZZMI\SetTextures
+; sigsA-vb0=525d51d8.txt (17008)
+drawindexed = 66450, 0, 0
+```
 
 1. XXMI更新导致的问题，需要回滚，相关教程https://gamebanana.com/tuts/18948
 2. 加载器或管理器异常，比如ShaderCache和ShaderFixes文件夹里有异常文件，需要移除里面的文件看是否恢复正常，或者卸载当前使用的加载器管理器，重新下载并安装到另一个磁盘中。
