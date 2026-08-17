@@ -21,7 +21,7 @@ sidebar_position: 10
 
 <img src="/assets/CnD9bgcSWoJxEyxIYUQcgDg7nff.png" src-width="691" src-height="699" align="center"/>
 
-1. 移除透明布料等问题导致的卡顿，需要在添加handling = skip的同时添加ib = null来解决。
+1. 移除透明布料等问题导致的卡顿，在大世界正常但角色界面和战斗中的某个角度非常卡。需要在添加handling = skip的同时添加ib = null来解决。
 
 举例1：
 

@@ -20,5 +20,5 @@ sidebar_position: 0
 10. 50系列的英伟达显卡有一个Smooth Vision（平滑运动）或者Mouvement fluide（流体运动）的功能,请关闭
 11. 在米哈游启动器上关闭DX12选项，mod只能用DX11
 
-Mod出问题优先将设置更改为上述配置
+Mod出问题优先将设置更改为上述配置然后重启游戏。
 

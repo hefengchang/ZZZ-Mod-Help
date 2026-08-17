@@ -14,27 +14,27 @@ sidebar_position: 12
 
 ```toml
 [TextureOverride_IB_f2f539b8_HeaA]
-hash = e30ca87f  #删除这一行或添加注释或者删除整个节
+hash = e30ca87f  ;删除这一行或添加注释或者删除整个节
 match_first_index = 0
-; hash = f2f539b8
+; hash = f2f539b8  ;添加英文;即可注释，注释则代表无效
 handling = skip
 run = CommandListSkinTexture
 ib = Resource_f2f539b8_Head
 run = CommandList_IB_f2f539b8_Head
 
 [TextureOverride_IB_f2f539b8_HeaB]
-hash = e30ca87f #删除这一行或添加注释或者删除整个节
+hash = e30ca87f ;删除这一行或添加注释或者删除整个节
 match_first_index = 984
-; hash = f2f539b8
+; hash = f2f539b8  ;添加英文;即可注释，注释则代表无效
 handling = skip
 run = CommandListSkinTexture
 ib = Resource_f2f539b8_Body
 run = CommandList_IB_f2f539b8_Body
 
 [TextureOverride_IB_f2f539b8_HeaC]
-hash = e30ca87f #删除这一行或添加注释或者删除整个节
+hash = e30ca87f ;删除这一行或添加注释或者删除整个节
 match_first_index = 8442
-; hash = f2f539b8
+; hash = f2f539b8  ;添加英文;即可注释，注释则代表无效
 handling = skip
 run = CommandListSkinTexture
 ib = Resource_f2f539b8_Dress
