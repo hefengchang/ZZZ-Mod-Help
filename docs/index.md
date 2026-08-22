@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "绝区零 Mod 指南"
   text: "Mod 安装 · 问题排查 · 制作教程"
-  tagline: 我们可以把答案铺在您眼前，但没法替您把知识塞进脑子里。
+  tagline: 我们可以把答案铺在您眼前，但没法替您把知识塞进脑子里
   actions:
     - theme: brand
       text: 📖 快速上手
