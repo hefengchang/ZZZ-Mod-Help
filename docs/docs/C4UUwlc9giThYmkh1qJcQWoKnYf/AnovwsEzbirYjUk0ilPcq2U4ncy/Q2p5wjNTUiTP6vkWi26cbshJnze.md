@@ -10,7 +10,7 @@ sidebar_position: 1
 
 1. 更改游戏设置
 2. 请勿将mod相关文件放入游戏文件夹内
-3. 更新XXMI至最新版并进行修复ZZMI
+3. 更新XXMI至最新版,备份Mods文件夹后删除ZZMI文件夹，进行修复ZZMI
 4. 使用最新版的修复工具
 5. 米哈游启动器一键修复
 6. 在Mods文件夹中搜索rabbitfx并删除所有相关ini文件，更新rabbitfx至最新版并保证只存在一个

@@ -8,7 +8,9 @@ sidebar_position: 2
 
 # 更新时下载太慢或报错
 
-因为是从Github上进行更新的，所以需要挂梯子才能下载。如果仍然下载报错，就关闭软件并更换节点后再次更新，或者直接从Github上下载[最新版](https://github.com/SpectrumQT/XXMI-Launcher/releases)。
+因为是从Github上进行更新的，所以需要挂梯子才能下载。如果仍然下载报错，就关闭软件并更换节点后再次更新，或者直接从Github上下载[最新版](https://github.com/SpectrumQT/XXMI-Launcher/releases)。另一种方法是在设置里关闭SSL验证。
+
+<img src="/assets/VzVvbuw8SoOFOwxioZxcKAPmnvb.png" src-width="1014" src-height="430" align="center"/>
 
 崩溃后无法重新安装，可参考这个帖子https://gamebanana.com/questions/100933
 
