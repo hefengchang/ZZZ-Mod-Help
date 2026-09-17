@@ -41,3 +41,5 @@ ib = Resource_f2f539b8_Dress
 run = CommandList_IB_f2f539b8_Dress
 ```
 
+3.使用顶点与索引修复工具，它包含在zzz_fix.中文版中。
+

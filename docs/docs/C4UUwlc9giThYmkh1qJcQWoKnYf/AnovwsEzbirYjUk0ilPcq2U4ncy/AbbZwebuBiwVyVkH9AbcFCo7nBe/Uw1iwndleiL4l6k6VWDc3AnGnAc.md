@@ -64,7 +64,7 @@ hash = aa71e514
 hash = 2eb162ef
 ```
 
-2.某些工具造成的ini配置产生了变化，修改了按键相关的代码，需要恢复ini的备份文件来进行修复。比如这个链接里的工具https://gamebanana.com/tools/19862
+2.某些工具造成的ini配置产生了变化，修改了按键相关的代码，需要恢复ini的备份文件来进行修复。比如这个链接里的工具无重载模组管理器https://gamebanana.com/tools/19862
 
 相关问题：https://gamebanana.com/questions/99072
 

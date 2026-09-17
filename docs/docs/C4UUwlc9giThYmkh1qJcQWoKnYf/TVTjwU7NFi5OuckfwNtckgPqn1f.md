@@ -870,7 +870,7 @@ dump = dump_rt dump_tex dump_cb dump_vb dump_ib buf txt dds
 
 ## 关于 Hash 的注意事项
 
-- **显存不同 Hash 不同**：显卡显存 ≥ 4GB（高显）与 &lt; 4GB（低显）的 Hash 不同
+- **显存不同 Hash 不同**：显卡显存 ≥ 6GB（高显）与 &lt; 6GB（低显）的 Hash 不同
 
 - **服务器版本影响**：国服/国际服/亚服的 Hash 可能不同
 
