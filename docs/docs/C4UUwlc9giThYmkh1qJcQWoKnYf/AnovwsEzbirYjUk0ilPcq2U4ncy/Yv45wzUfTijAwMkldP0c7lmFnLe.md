@@ -11,7 +11,7 @@ sidebar_position: 3
 1. 有些修复工具仅支持单个mod的修复，请仔细阅读工具说明。
 2. 修复完成后，尝试切换场景、进出录像店、重启游戏看是否解决。
 3. 有时候修复工具本身存在一些错误，导致错误的添加了一些hash，比如潘引壶、橘福福、仪玄等角色。
-4. 版本修复工具会在修复时在ib= 的上方添加run = CommandListSkinTexture   。这可能会造成某些异常bug。举例1.现在的mod使用了run = CommandList\ZZMI\SetTextures这个代码，如果优先使用了run = CommandListSkinTexture 可能会造成发光贴图不生效等异常。
+4. 版本修复工具会在修复时在ib= 的上方添加run = CommandListSkinTexture   。这可能会造成某些异常bug。举例1.现在的mod使用了run = CommandList\ZZMI\SetTextures这个代码，如果优先使用了run = CommandListSkinTexture 可能会造成发光贴图不生效、贴图失效、变黑等异常。
 
      解决方法有两种：
 

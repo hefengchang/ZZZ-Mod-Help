@@ -118,6 +118,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "👤 脸部碎坏或冲突",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/W6qKwNqDziVl8BkjAAdcZ3jlnyg"
+          },
+          {
+            text: "🖼️ 使用修复工具后贴图纹理错乱",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/CMITwQth2il0cbkrM4HcJTZ1nVh"
           }
         ]
       },

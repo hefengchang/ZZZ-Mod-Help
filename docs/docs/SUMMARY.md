@@ -24,6 +24,7 @@
       - [所有角色的眼睛变成黑色](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\UmggwTIMTisDnTkWTcLcMcTwnuf.md)
       - [叶瞬光等角色在某个视角会导致异常](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\DQORwGBY6isTBFkUsqwcif6hnvg.md)
       - [脸部碎坏或冲突](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\W6qKwNqDziVl8BkjAAdcZ3jlnyg.md)
+      - [使用修复工具后贴图纹理错乱](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\CMITwQth2il0cbkrM4HcJTZ1nVh.md)
     - [RabbitFX相关问题](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e.md)
       - [npc靠近时脸部变黑，出现异常](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e\RhqBwxnq3i2N0HkLwmAcJyJInlg.md)
       - [游戏切到某个mod时会崩溃](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\CCDZwL1p5iVyRHkgmdAclUX0n1e\XWxywlpoEi5XGgkYyoRcoDmsnph.md)
