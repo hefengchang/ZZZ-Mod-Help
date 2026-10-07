@@ -13,6 +13,8 @@ sidebar_position: 5
 
 https://www.patreon.com/explore/search?type=campaign&query=Zenless%20Zone%20Zero
 
+https://www.fanbox.cc/
+
 N网：https://www.nexusmods.com/games/zenlesszonezero
 
 香蕉网：需要科学上网，https://gamebanana.com/games/19567

@@ -16,3 +16,5 @@ https://gamebanana.com/tuts/18948
 
 <img src="/assets/ZAOhb6IMyowCHzx04kvcGwvNnAd.png" src-width="1236" src-height="674" align="center"/>
 
+3.彻底卸载XXMI，换个盘重新安装
+

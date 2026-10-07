@@ -11,7 +11,9 @@ sidebar_position: 3
 1. 有些修复工具仅支持单个mod的修复，请仔细阅读工具说明。
 2. 修复完成后，尝试切换场景、进出录像店、重启游戏看是否解决。
 3. 有时候修复工具本身存在一些错误，导致错误的添加了一些hash，比如潘引壶、橘福福、仪玄等角色。
-4. 版本修复工具会在修复时在ib= 的上方添加run = CommandListSkinTexture   。这可能会造成某些异常bug。举例1.现在的mod使用了run = CommandList\ZZMI\SetTextures这个代码，如果优先使用了run = CommandListSkinTexture 可能会造成发光贴图不生效、贴图失效、变黑等异常。
+4. 版本修复工具(使用我的修复工具可自动解决此问题)会在修复时在ib= 的上方添加run = CommandListSkinTexture   。这可能会造成某些异常bug。
+
+问题1.现在的mod使用了run = CommandList\ZZMI\SetTextures这个代码，如果优先使用了run = CommandListSkinTexture 可能会造成发光贴图不生效、贴图失效、变黑等异常。
 
      解决方法有两种：
 
@@ -55,7 +57,7 @@ run = CommandList\ZZMI\SetTextures
 run = CommandListSkinTexture
 ```
 
-举例2.某些拥有相同hash值的节会丢失一部分代码。这是ini文件格式错误(对match_first_index =这一行进行了注释;)导致的程序误判。
+问题2.某些拥有相同hash值的节会丢失一部分代码。这是ini文件格式错误(对match_first_index =这一行进行了注释;)导致的程序误判。
 
 解决方法有两种：
 
@@ -87,6 +89,18 @@ ib = Resource_4a178546_Component1
 [TextureOverrideCheckHash]
 hash = 4a178546
 $active = 1
+```
+
+问题3.新版mod添加了`match_index_count`，这就导致了部分角色更新后因为该值的变化而出现损坏，修复工具可能并没有针对其进行修复，只需要将这一行代码删除或注释掉即可，如果还不行就根据hash表手动查找该值的最新值。
+
+```text
+[TextureOverride_785b21f5_Component1]
+hash = 28e05a59
+match_first_index = 0
+;match_index_count = 57612  ;删除这一行或者添加注释
+handling = skip
+run = CommandListSkinTexture
+ib = Resource_785b21f5_Component1
 ```
 
 如果确定是修复工具导致的问题，手动恢复备份。一般修复工具都会有备份功能，你会看到有些ini文件名字是加有disabled前缀的，删除disabled即可恢复（注意删除现有的ini文件，不要重复）。

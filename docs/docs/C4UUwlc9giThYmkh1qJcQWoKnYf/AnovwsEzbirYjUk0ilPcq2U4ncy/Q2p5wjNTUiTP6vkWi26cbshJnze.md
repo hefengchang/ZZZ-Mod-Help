@@ -14,7 +14,7 @@ sidebar_position: 1
 4. 使用最新版的修复工具
 5. 米哈游启动器一键修复
 6. 在Mods文件夹中搜索rabbitfx并删除所有相关ini文件，更新rabbitfx至最新版并保证只存在一个
-7. 移除单独的反虚化mod，因为rabbitfx自带反虚化，这会导致冲突
+7. 移除单独的反虚化mod，通常位于ShaderFixes文件夹内。因为rabbitfx自带反虚化，这会导致冲突
 8. 非XXMI用户更新Slotfix并确保只有一个，XXMI用户自带Slotfix请勿重复添加
 9. 在作者那里重新下载最新版的mod，角色与皮肤不要同时用mod
 10. 检查ShaderCache和ShaderFixes文件夹里是否有异常文件，可以直接移除里面的所有内容
