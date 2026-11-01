@@ -30,6 +30,41 @@ function runCapture(cmd) {
   }
 }
 
+// 已提交但还没推送到远端的提交数
+function countPendingCommits() {
+  const up = runCapture('git rev-parse --abbrev-ref --symbolic-full-name @{u}')
+  const base = up || (runCapture('git rev-parse --verify origin/main') ? 'origin/main' : '')
+  if (!base) return 0
+  const n = parseInt(runCapture(`git rev-list --count ${base}..HEAD`), 10)
+  return Number.isNaN(n) ? 0 : n
+}
+
+function sleepSync(ms) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms)
+}
+
+function pushWithRetry(tries = 3) {
+  for (let i = 1; i <= tries; i++) {
+    if (run('git push', `推送到 GitHub（第 ${i}/${tries} 次）`)) return true
+    if (i < tries) {
+      console.log('   推送失败，5 秒后重试...')
+      sleepSync(5000)
+    }
+  }
+  return false
+}
+
+function printDeployDone() {
+  console.log('')
+  console.log('========================================')
+  console.log('  ✅ 部署完成！')
+  console.log('========================================')
+  console.log('')
+  console.log('  GitHub Actions 正在自动构建...')
+  console.log('  约 1-2 分钟后访问:')
+  console.log('  https://hefengchang.github.io/ZZZ-Mod-Help/')
+}
+
 console.log('')
 console.log('========================================')
 console.log('  绝区零 Mod 帮助文档 - 一键部署')
@@ -122,6 +157,18 @@ if (changes) {
   if (modified) console.log(`   📝 修改: ${modified}`)
   if (deleted) console.log(`   🗑️  删除: ${deleted}`)
 } else {
+  // 工作区干净，但可能上次推送失败留下了未上传的提交
+  const pending = countPendingCommits()
+  if (pending > 0) {
+    console.log(`   没有新变更，但有 ${pending} 个提交未推送`)
+    console.log('\n📤 补推未上传的提交...')
+    if (pushWithRetry()) {
+      printDeployDone()
+      process.exit(0)
+    }
+    console.log('⚠️  推送失败（已重试 3 次），检查网络后重跑本脚本即可补推')
+    process.exit(1)
+  }
   console.log('   没有变更需要部署')
   console.log('\n✅ 网站已是最新！')
   process.exit(0)
@@ -157,18 +204,13 @@ const commitMsg = hasFeishuUpdate
 if (run(`git add -A && git commit -m "${commitMsg}"`, '提交')) {
   console.log('   ✅ 提交成功')
 
-  if (run('git push', '推送到 GitHub')) {
-    console.log('')
-    console.log('========================================')
-    console.log('  ✅ 部署完成！')
-    console.log('========================================')
-    console.log('')
-    console.log('  GitHub Actions 正在自动构建...')
-    console.log('  约 1-2 分钟后访问:')
-    console.log('  https://hefengchang.github.io/ZZZ-Mod-Help/')
+  if (pushWithRetry()) {
+    printDeployDone()
   } else {
-    console.log('⚠️  推送失败，可能是网络问题或没有远程仓库')
-    console.log('   手动推送: git push')
+    console.log('⚠️  推送失败（已重试 3 次），可能是网络问题或没有远程仓库')
+    console.log('   提交已保存在本地，检查网络后重跑本脚本会自动补推')
+    console.log('   也可手动: git push')
+    process.exit(1)
   }
 } else {
   // 检查是否因为没有变更而提交失败
