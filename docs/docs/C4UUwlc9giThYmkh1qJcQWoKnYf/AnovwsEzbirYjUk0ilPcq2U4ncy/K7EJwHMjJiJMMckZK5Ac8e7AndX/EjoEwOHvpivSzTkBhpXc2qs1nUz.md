@@ -2,7 +2,7 @@
 title: 脸部纹理或武器纹理异常
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\EjoEwOHvpivSzTkBhpXc2qs1nUz
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 

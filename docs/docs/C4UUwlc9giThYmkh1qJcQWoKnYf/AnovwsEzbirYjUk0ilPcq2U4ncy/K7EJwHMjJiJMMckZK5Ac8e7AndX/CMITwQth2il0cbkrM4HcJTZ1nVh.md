@@ -2,7 +2,7 @@
 title: 使用修复工具后贴图纹理错乱
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\CMITwQth2il0cbkrM4HcJTZ1nVh
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 

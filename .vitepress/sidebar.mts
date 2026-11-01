@@ -76,6 +76,10 @@ const sidebar: DefaultTheme.SidebarItem[] = [
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/GQf4wfrn7iGMI0kX5X1cpTjrnpc"
           },
           {
+            text: "💇 头发阴影异常",
+            link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/SVIiwgmDgiDlo1kLiwgcva7fnTd"
+          },
+          {
             text: "🖼️ 角色没有装mod，但贴图错误",
             link: "/docs/C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy/K7EJwHMjJiJMMckZK5Ac8e7AndX/XEGvwNId7ikoEhkmk7Mczwjbnze"
           },

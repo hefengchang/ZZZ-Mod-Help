@@ -13,6 +13,7 @@
     - [贴图与模型相关问题](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX.md)
       - [头发身体等部位异常发光](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\StCLwEIPviv3Drk6N4Mc2gjFnRb.md)
       - [头发等部位在动态壁纸中贴图错乱](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\GQf4wfrn7iGMI0kX5X1cpTjrnpc.md)
+      - [头发阴影异常](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\SVIiwgmDgiDlo1kLiwgcva7fnTd.md)
       - [角色没有装mod，但贴图错误](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\XEGvwNId7ikoEhkmk7Mczwjbnze.md)
       - [仰视靠近视角变暗](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\NeHVwukVKiaQrakKmYcctQcmnQb.md)
       - [透明类mod仰视靠近变暗](C4UUwlc9giThYmkh1qJcQWoKnYf/AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\SsLUwk4JRiiQlPkpu4kcg336nYc.md)

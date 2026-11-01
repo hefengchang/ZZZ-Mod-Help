@@ -112,3 +112,5 @@ drawindexed = 66450, 0, 0
 
 意思是将DISABLED文件夹里的ShaderCacheSettings.ini给复制到RabbitFX文件夹下。
 
+1. 游戏启动后崩溃，Unity 崩溃。可以在米哈游启动器的游戏设置中查看崩溃日志，将日志丢给DeepSeek Harness等AI工具，让它给你分析原因。
+

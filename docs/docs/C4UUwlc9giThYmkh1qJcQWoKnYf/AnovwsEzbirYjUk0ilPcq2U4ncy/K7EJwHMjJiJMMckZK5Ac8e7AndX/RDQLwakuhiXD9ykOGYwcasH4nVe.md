@@ -2,7 +2,7 @@
 title: 角色选择界面阴影异常
 slug: >-
   C4UUwlc9giThYmkh1qJcQWoKnYf\AnovwsEzbirYjUk0ilPcq2U4ncy\K7EJwHMjJiJMMckZK5Ac8e7AndX\RDQLwakuhiXD9ykOGYwcasH4nVe
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 
